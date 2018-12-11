@@ -1,7 +1,7 @@
 #include "FormeGeo.h"
 #include "Vecteur2D.h"
 
-FormeGeo::FormeGeo(const std::string& n, Vecteur2D * p) : nom(n), pos(p) {}
+FormeGeo::FormeGeo(const std::string& n, const Vecteur2D * p) : nom(n), pos(new Vecteur2D(*p)) {}
 
 FormeGeo::FormeGeo(const FormeGeo &f) : nom(f.getNom()), pos(f.getPos()) {}
 
@@ -19,7 +19,7 @@ inline const std::string FormeGeo::getNom() const {
 const std::string FormeGeo::getInfos() const {
 	std::ostringstream oss;
 	oss << "Nom : " << nom << std::endl;
-	oss << "Position : " << pos << std::endl;
+	oss << "Position : " << *pos << std::endl;
 	return oss.str();
 }
 

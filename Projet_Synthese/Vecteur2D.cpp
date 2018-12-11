@@ -2,10 +2,9 @@
 
 Vecteur2D::Vecteur2D(const double & x, const double & y) : x(x), y(y) {}
 
+Vecteur2D::Vecteur2D(const Vecteur2D &v) : x(v.x), y(v.y) {}
 
-
-Vecteur2D::~Vecteur2D() {
-}
+Vecteur2D::~Vecteur2D() {}
 
 const Vecteur2D Vecteur2D::creeVecteur2D(const double & x, const double & y) {
 	return Vecteur2D(x, y);
@@ -53,11 +52,11 @@ inline const Vecteur2D & Vecteur2D::operator*=(const double & a) {
 
 Vecteur2D::operator std::string() const {
 	std::ostringstream os;
-	os << "( " << x << ", " << y << ")";
+	os << "(" << x << ", " << y << ")";
 	return os.str();
 }
 
-inline std::ostream & operator<<(std::ostream & os, const Vecteur2D & u) {
+std::ostream & operator<<(std::ostream & os, const Vecteur2D & u) {
 	os << (std::string)u;
 	return os;
 }

@@ -1,3 +1,2 @@
-﻿  FormeGeoSimple.cpp
-c:\users\geels\documents\github\java & c++\projet_synthese\projet_synthese\formegeosimple.cpp(3): error C2664: 'FormeGeo::FormeGeo(const FormeGeo &)' : impossible de convertir l'argument 2 de 'const Vecteur2D *' en 'Vecteur2D *'
-  c:\users\geels\documents\github\java & c++\projet_synthese\projet_synthese\formegeosimple.cpp(3): note: La conversion perd les qualificateurs
+﻿  Main.cpp
+  Projet_Synthese.vcxproj -> C:\Users\geels\Documents\GitHub\Java & C++\Projet_Synthese\Debug\Projet_Synthese.exe

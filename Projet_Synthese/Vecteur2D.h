@@ -9,6 +9,7 @@ class Vecteur2D {
 public:
 	double x, y;
 	Vecteur2D(const double & x = 0, const double & y = 0);
+	Vecteur2D(const Vecteur2D&);
 	virtual ~Vecteur2D();
 
 	static const Vecteur2D creeVecteur2D(const double & x, const double & y);
@@ -27,6 +28,6 @@ public:
 
 	operator std::string() const;
 
-	friend inline std::ostream & operator << (std::ostream & os, const Vecteur2D & u);
+	friend std::ostream & operator << (std::ostream & os, const Vecteur2D & u);
 };
 
