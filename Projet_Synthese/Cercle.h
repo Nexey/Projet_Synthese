@@ -11,6 +11,6 @@ public:
 
 	inline const double getRayon() const;
 	virtual const std::string getInfos() const;
-	virtual FormeGeo * clone() const;
+	FormeGeo * clone() const;
 };
 

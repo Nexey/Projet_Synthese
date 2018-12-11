@@ -7,9 +7,9 @@
 class FormeGeo {
 	std::string nom;
 	FormeGeo() = delete;
-	Vecteur2D pos;
 public:
-	FormeGeo(const std::string&, const Vecteur2D& p);
+	Vecteur2D pos;
+	FormeGeo(const std::string&, const Vecteur2D&);
 	FormeGeo(const FormeGeo&);
 	virtual ~FormeGeo();
 
@@ -21,7 +21,7 @@ public:
 		YELLOW = 5,
 		CYAN = 6;
 
-	inline const Vecteur2D getPos() const;
+//	const Vecteur2D& getPos() const;
 	inline const std::string getNom() const;
 
 	virtual const std::string getInfos() const;

@@ -7,9 +7,9 @@ FormeGeo::FormeGeo(const FormeGeo &f) : nom(f.getNom()) {}
 FormeGeo::~FormeGeo() {}
 
 
-inline const Vecteur2D FormeGeo::getPos() const {
+/*const Vecteur2D& FormeGeo::getPos() const {
 	return pos;
-}
+}*/
 
 inline const std::string FormeGeo::getNom() const {
 	return nom;
