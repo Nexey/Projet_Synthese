@@ -1,5 +1,10 @@
 ﻿  Triangle.cpp
+  FormeGeoSimple.cpp
+  FormeGeo.cpp
   Cercle.cpp
+  Génération de code en cours...
+  Compilation en cours...
+  Main.cpp
   Génération de code en cours...
 Cercle.obj : error LNK2019: symbole externe non résolu "public: class Vecteur2D const __thiscall FormeGeo::getPos(void)const " (?getPos@FormeGeo@@QBE?BVVecteur2D@@XZ) référencé dans la fonction "public: __thiscall Cercle::Cercle(class Cercle const &)" (??0Cercle@@QAE@ABV0@@Z)
 FormeGeoSimple.obj : error LNK2001: symbole externe non résolu "public: class Vecteur2D const __thiscall FormeGeo::getPos(void)const " (?getPos@FormeGeo@@QBE?BVVecteur2D@@XZ)

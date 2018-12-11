@@ -1,6 +1,6 @@
 #include "FormeGeoSimple.h"
 
-FormeGeoSimple::FormeGeoSimple(const std::string n, const int c, const Vecteur2D p) : FormeGeo(n, p), couleur(c) {}
+FormeGeoSimple::FormeGeoSimple(const std::string& n, const int& c, const Vecteur2D& p) : FormeGeo(n, p), couleur(c) {}
 
 FormeGeoSimple::FormeGeoSimple(const FormeGeoSimple &f) : FormeGeo(f.getNom(), f.getPos()), couleur(f.getCouleur()) {}
 

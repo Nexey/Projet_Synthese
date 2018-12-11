@@ -6,7 +6,7 @@ class FormeGeoSimple :
 	int couleur;
 	FormeGeoSimple() = delete;
 public:
-	FormeGeoSimple(const std::string n, const int c, const Vecteur2D p);
+	FormeGeoSimple(const std::string& n, const int& c, const Vecteur2D& p);
 	FormeGeoSimple(const FormeGeoSimple&);
 	virtual ~FormeGeoSimple();
 
