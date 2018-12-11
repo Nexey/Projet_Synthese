@@ -1,15 +1,16 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include "Vecteur2D.h"
+
+class Vecteur2D;
 
 #pragma once
 class FormeGeo {
 	std::string nom;
 	FormeGeo() = delete;
 public:
-	Vecteur2D pos;
-	FormeGeo(const std::string&, const Vecteur2D&);
+	Vecteur2D* pos;
+	FormeGeo(const std::string&, Vecteur2D*);
 	FormeGeo(const FormeGeo&);
 	virtual ~FormeGeo();
 
@@ -21,7 +22,7 @@ public:
 		YELLOW = 5,
 		CYAN = 6;
 
-//	const Vecteur2D& getPos() const;
+	Vecteur2D * getPos() const;
 	inline const std::string getNom() const;
 
 	virtual const std::string getInfos() const;

@@ -5,7 +5,7 @@ class Cercle :
 	Cercle() = delete;
 	double rayon;
 public:
-	Cercle(const std::string& n, const int& c, const double& r, const Vecteur2D& p);
+	Cercle(const std::string& n, const int& c, const double& r, const Vecteur2D * p);
 	Cercle(const Cercle&);
 	virtual ~Cercle();
 

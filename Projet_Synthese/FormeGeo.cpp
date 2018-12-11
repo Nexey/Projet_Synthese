@@ -1,15 +1,16 @@
 #include "FormeGeo.h"
+#include "Vecteur2D.h"
 
-FormeGeo::FormeGeo(const std::string& n, const Vecteur2D& p) : nom(n), pos(p) {}
+FormeGeo::FormeGeo(const std::string& n, Vecteur2D * p) : nom(n), pos(p) {}
 
-FormeGeo::FormeGeo(const FormeGeo &f) : nom(f.getNom()) {}
+FormeGeo::FormeGeo(const FormeGeo &f) : nom(f.getNom()), pos(f.getPos()) {}
 
 FormeGeo::~FormeGeo() {}
 
 
-/*const Vecteur2D& FormeGeo::getPos() const {
+Vecteur2D* FormeGeo::getPos() const {
 	return pos;
-}*/
+}
 
 inline const std::string FormeGeo::getNom() const {
 	return nom;
