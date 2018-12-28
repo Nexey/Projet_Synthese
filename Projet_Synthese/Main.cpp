@@ -25,6 +25,8 @@ int main() {
 	Groupe g1(FormeGeo::BLUE);
 	g1 = g1 + p + *pt + Triangle(FormeGeo::CYAN, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
 	std::cout << g1 << std::endl;
+	std::cout << *g1.clone() << std::endl;
+
 	system("pause");
 	delete pt;
 	exit(0);
