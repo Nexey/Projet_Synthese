@@ -4,11 +4,11 @@
 
 #pragma once
 class FormeGeo {
-	std::string nom;
+	std::string desig;
 	int couleur;
 	FormeGeo() = delete;
 public:
-	FormeGeo(const std::string& n, const int& c);
+	FormeGeo(const std::string& d, const int& c);
 	FormeGeo(const FormeGeo&);
 	virtual ~FormeGeo();
 
@@ -22,12 +22,13 @@ public:
 
 	static const std::string tabCouleurs[6];
 
-	inline const std::string& getNom() const;
+	inline const std::string& getDesig() const;
 
 	virtual const std::string getInfos() const;
 	virtual FormeGeo * clone() const = 0;
 
-	inline const int& getCouleur() const;
+	const int getCouleur() const;
+	void setCouleur(const int&);
 
 	virtual const int getNbSommet() const = 0;
 

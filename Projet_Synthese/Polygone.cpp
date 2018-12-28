@@ -1,16 +1,16 @@
 #include "Polygone.h"
-#include "Vecteur2D.h"
 
-Polygone::Polygone(const std::string & n, const int & c) : FormeGeoSimple(n, c), nbPoint(0) {
-}
+Polygone::Polygone(const int & c) : FormeGeoSimple("Polygone", c), nbPoint(0) {}
 
-Polygone::Polygone(const Polygone &p) : FormeGeoSimple(p.getNom(), p.getCouleur()), nbPoint(0) {
-	std::vector<const Vecteur2D*>::const_iterator it = p.points.begin();
-	for (it; it < p.points.end(); it++)
+Polygone::Polygone(const Polygone &p) : FormeGeoSimple(p.getDesig(), p.getCouleur()), nbPoint(0) {
+	std::vector<const Vecteur2D*>::const_iterator it = p.getVector().begin();
+	for (it; it < p.getVector().end(); it++)
 		*this = *this + **it;
 }
 
-Polygone::~Polygone() {}
+Polygone::~Polygone() {
+	points.clear();
+}
 
 Polygone & Polygone::operator+(const Vecteur2D &v) {
 	points.push_back(new Vecteur2D(v));
@@ -24,6 +24,10 @@ Polygone & Polygone::operator+=(const Vecteur2D &v) {
 
 const Vecteur2D & Polygone::operator[](const int i) const {
 	return *points.at(i);
+}
+
+const std::vector<const Vecteur2D*>& Polygone::getVector() const {
+	return points;
 }
 
 const int Polygone::getNbSommet() const {

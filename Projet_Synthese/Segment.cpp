@@ -1,9 +1,9 @@
 #include "Segment.h"
 #include "Vecteur2D.h"
 
-Segment::Segment(const std::string & n, const int & c, const Vecteur2D& p1, const Vecteur2D& p2) : FormeGeoSimple(n, c), p1(p1), p2(p2) {}
+Segment::Segment(const int & c, const Vecteur2D& p1, const Vecteur2D& p2) : FormeGeoSimple("Segment", c), p1(p1), p2(p2) {}
 
-Segment::Segment(const Segment &s) : FormeGeoSimple(s.getNom(), s.getCouleur()), p1(s.getP1()), p2(s.getP2()) {}
+Segment::Segment(const Segment &s) : FormeGeoSimple(s.getDesig(), s.getCouleur()), p1(s.getP1()), p2(s.getP2()) {}
 
 Segment::~Segment() {}
 

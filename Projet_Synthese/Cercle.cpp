@@ -1,8 +1,8 @@
 #include "Cercle.h"
 
-Cercle::Cercle(const std::string& n, const int& c, const double& r, const Vecteur2D& p) : FormeGeoSimple(n, c), rayon(r), p(p) {}
+Cercle::Cercle(const int& c, const double& r, const Vecteur2D& p) : FormeGeoSimple("Cercle", c), rayon(r), p(p) {}
 
-Cercle::Cercle(const Cercle &c) : FormeGeoSimple(c.getNom(), c.getCouleur()), rayon(c.getRayon()), p(c.getP()) {}
+Cercle::Cercle(const Cercle &c) : FormeGeoSimple(c.getDesig(), c.getCouleur()), rayon(c.getRayon()), p(c.getP()) {}
 
 Cercle::~Cercle() {
 }

@@ -6,7 +6,7 @@ class Segment :
 	Segment() = delete;
 	Vecteur2D p1, p2;
 public:
-	Segment(const std::string& n, const int& c, const Vecteur2D& p1, const Vecteur2D& p2);
+	Segment(const int& c, const Vecteur2D& p1, const Vecteur2D& p2);
 	Segment(const Segment&);
 	virtual ~Segment();
 

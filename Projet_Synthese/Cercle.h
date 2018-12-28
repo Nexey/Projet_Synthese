@@ -8,7 +8,7 @@ class Cercle :
 	double rayon;
 	Vecteur2D p;
 public:
-	Cercle(const std::string& n, const int& c, const double& r, const Vecteur2D& p);
+	Cercle(const int& c, const double& r, const Vecteur2D& p);
 	Cercle(const Cercle&);
 	virtual ~Cercle();
 

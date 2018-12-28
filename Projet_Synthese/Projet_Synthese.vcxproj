@@ -118,6 +118,7 @@
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="FormeGeo.h" />
     <ClInclude Include="FormeGeoSimple.h" />
+    <ClInclude Include="Groupe.h" />
     <ClInclude Include="Polygone.h" />
     <ClInclude Include="Segment.h" />
     <ClInclude Include="Triangle.h" />
@@ -127,6 +128,7 @@
     <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="FormeGeo.cpp" />
     <ClCompile Include="FormeGeoSimple.cpp" />
+    <ClCompile Include="Groupe.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="Segment.cpp" />

@@ -13,72 +13,84 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Forme">
-      <UniqueIdentifier>{81140f74-774f-4a53-81bc-0202247ef52d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Forme">
-      <UniqueIdentifier>{cda65314-045d-47ea-838c-329c07042fa1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Forme\Forme simple">
-      <UniqueIdentifier>{df9f6655-e756-4ab0-a89f-43b6757229cf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Forme\Forme Simple">
-      <UniqueIdentifier>{d903605b-a16f-4fa9-8d14-7130b1005c82}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers d%27en-tête\Maths">
       <UniqueIdentifier>{60405393-f877-4306-9711-da4acabe6bf0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fichiers sources\Maths">
       <UniqueIdentifier>{0bcd59dc-25bd-4ed9-ac43-b8af51a3d831}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Formes">
+      <UniqueIdentifier>{81140f74-774f-4a53-81bc-0202247ef52d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Formes">
+      <UniqueIdentifier>{cda65314-045d-47ea-838c-329c07042fa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Formes\Formes simples">
+      <UniqueIdentifier>{df9f6655-e756-4ab0-a89f-43b6757229cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Formes\Formes composées">
+      <UniqueIdentifier>{54bc899f-c7f6-4686-b3cf-4528cf586675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Formes\Formes simples">
+      <UniqueIdentifier>{d903605b-a16f-4fa9-8d14-7130b1005c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Formes\Formes composées">
+      <UniqueIdentifier>{2c232dec-6fdd-43b9-affc-635311835826}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FormeGeo.cpp">
-      <Filter>Fichiers sources\Forme</Filter>
+      <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="FormeGeoSimple.cpp">
-      <Filter>Fichiers sources\Forme\Forme Simple</Filter>
+      <Filter>Fichiers sources\Formes\Formes simples</Filter>
     </ClCompile>
     <ClCompile Include="Triangle.cpp">
-      <Filter>Fichiers sources\Forme\Forme Simple</Filter>
+      <Filter>Fichiers sources\Formes\Formes simples</Filter>
     </ClCompile>
     <ClCompile Include="Cercle.cpp">
-      <Filter>Fichiers sources\Forme\Forme Simple</Filter>
+      <Filter>Fichiers sources\Formes\Formes simples</Filter>
     </ClCompile>
     <ClCompile Include="Vecteur2D.cpp">
       <Filter>Fichiers sources\Maths</Filter>
     </ClCompile>
     <ClCompile Include="Segment.cpp">
-      <Filter>Fichiers sources\Forme\Forme Simple</Filter>
+      <Filter>Fichiers sources\Formes\Formes simples</Filter>
     </ClCompile>
     <ClCompile Include="Polygone.cpp">
-      <Filter>Fichiers sources\Forme\Forme Simple</Filter>
+      <Filter>Fichiers sources\Formes\Formes simples</Filter>
+    </ClCompile>
+    <ClCompile Include="Groupe.cpp">
+      <Filter>Fichiers sources\Formes\Formes composées</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FormeGeo.h">
-      <Filter>Fichiers d%27en-tête\Forme</Filter>
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
     <ClInclude Include="FormeGeoSimple.h">
-      <Filter>Fichiers d%27en-tête\Forme\Forme simple</Filter>
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Fichiers d%27en-tête\Forme\Forme simple</Filter>
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
     </ClInclude>
     <ClInclude Include="Cercle.h">
-      <Filter>Fichiers d%27en-tête\Forme\Forme simple</Filter>
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
     </ClInclude>
     <ClInclude Include="Vecteur2D.h">
       <Filter>Fichiers d%27en-tête\Maths</Filter>
     </ClInclude>
     <ClInclude Include="Segment.h">
-      <Filter>Fichiers d%27en-tête\Forme\Forme simple</Filter>
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
     </ClInclude>
     <ClInclude Include="Polygone.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
+    </ClInclude>
+    <ClInclude Include="Groupe.h">
+      <Filter>Fichiers d%27en-tête\Formes\Formes composées</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

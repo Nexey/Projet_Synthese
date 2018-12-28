@@ -1,13 +1,16 @@
 #include "Triangle.h"
 #include "Segment.h"
 #include "Polygone.h"
+#include "Groupe.h"
 
+#include <Windows.h> // Pour les accents dans la console sous Windows
 int main() {
-	FormeGeo *pt = new Triangle("Triangle", FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
+	SetConsoleOutputCP(1252); // Pour les accents dans la console sous Windows
+	FormeGeo *pt = new Triangle(FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
 	std::cout << *pt << std::endl;
 	std::cout << *pt->clone() << std::endl;
 
-	Polygone p("Polygone", FormeGeo::GREEN);
+	Polygone p(FormeGeo::GREEN);
 	p = p + Vecteur2D(5, 6) + Vecteur2D(7, 8) + Vecteur2D(0, 5) + Vecteur2D(0, 4) + Vecteur2D(1, 8);
 	std::cout << p << std::endl;
 	std::cout << *p.clone() << std::endl;
@@ -15,11 +18,14 @@ int main() {
 	FormeGeo *tmp = pt;
 	delete tmp;
 
-	pt = new Segment("Segment", FormeGeo::CYAN, Vecteur2D(5, 5), Vecteur2D(0, 0));
+	pt = new Segment(FormeGeo::CYAN, Vecteur2D(5, 5), Vecteur2D(0, 0));
 
 	std::cout << *pt << std::endl;
-	delete pt;
 
+	Groupe g1(FormeGeo::BLUE);
+	g1 = g1 + p + *pt + Triangle(FormeGeo::CYAN, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
+	std::cout << g1 << std::endl;
 	system("pause");
+	delete pt;
 	exit(0);
 }

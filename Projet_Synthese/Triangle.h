@@ -6,7 +6,7 @@ class Triangle :
 	Triangle() = delete;
 	Vecteur2D p1, p2, p3;
 public:
-	Triangle(const std::string& n, const int& c, const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3);
+	Triangle(const int& c, const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3);
 	Triangle(const Triangle&);
 	virtual ~Triangle();
 
