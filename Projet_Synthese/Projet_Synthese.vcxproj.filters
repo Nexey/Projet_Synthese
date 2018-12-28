@@ -55,7 +55,7 @@
       <Filter>Fichiers sources\Forme\Forme Simple</Filter>
     </ClCompile>
     <ClCompile Include="Polygone.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Forme\Forme Simple</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -27,5 +27,5 @@ const std::string Segment::getInfos() const {
 }
 
 FormeGeo * Segment::clone() const {
-	return new Segment(getNom(), getCouleur(), p1, p2);
+	return new Segment(*this);
 }

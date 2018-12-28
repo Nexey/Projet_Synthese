@@ -28,5 +28,5 @@ const std::string Cercle::getInfos() const {
 }
 
 FormeGeo * Cercle::clone() const {
-	return new Cercle(getNom(), getCouleur(), rayon, p);
+	return new Cercle(*this);
 }

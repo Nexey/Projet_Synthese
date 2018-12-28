@@ -32,5 +32,5 @@ const std::string Triangle::getInfos() const {
 
 
 FormeGeo * Triangle::clone() const {
-	return new Triangle(getNom(), getCouleur(), p1, p2, p3);
+	return new Triangle(*this);
 }
