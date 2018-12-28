@@ -15,13 +15,17 @@ const int Cercle::getNbSommet() const {
 	return 1;
 }
 
+void Cercle::translation(const Vecteur2D &v) {
+	p += v;
+}
+
 inline const double Cercle::getRayon() const {
 	return rayon;
 }
 
 const std::string Cercle::getInfos() const {
 	std::ostringstream oss;
-	oss << FormeGeoSimple::getInfos();
+	oss << FormeGeo::getInfos();
 	oss << "Rayon : " << std::endl << rayon << std::endl;
 	oss << "Centre : " << std::endl << p << std::endl;
 	return oss.str();

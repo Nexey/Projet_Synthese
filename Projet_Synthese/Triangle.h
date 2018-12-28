@@ -1,6 +1,6 @@
 #pragma once
 #include "FormeGeoSimple.h"
-#include "Vecteur2D.h"
+
 class Triangle :
 	public FormeGeoSimple {
 	Triangle() = delete;
@@ -16,6 +16,7 @@ public:
 
 	const int getNbSommet() const;
 
+	void translation(const Vecteur2D&);
 	virtual const std::string getInfos() const;
 	FormeGeo * clone() const;
 };

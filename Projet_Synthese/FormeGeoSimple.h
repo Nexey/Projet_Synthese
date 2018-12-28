@@ -8,6 +8,5 @@ public:
 	FormeGeoSimple(const std::string& n, const int& c);
 	FormeGeoSimple(const FormeGeoSimple&);
 	virtual ~FormeGeoSimple();
-	virtual const std::string getInfos() const;
 };
 

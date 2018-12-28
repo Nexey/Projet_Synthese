@@ -13,18 +13,18 @@ public:
 	virtual ~Vecteur2D();
 
 	static const Vecteur2D creeVecteur2D(const double & x, const double & y);
-	inline const Vecteur2D operator + (const Vecteur2D & u) const;
-	inline const Vecteur2D operator * (const double & a) const;
+	const Vecteur2D operator + (const Vecteur2D & u) const;
+	const Vecteur2D operator * (const double & a) const;
 
-	inline const Vecteur2D operator ^ (const Vecteur2D & u) const;
-	inline const Vecteur2D operator - () const;
+	const Vecteur2D operator ^ (const Vecteur2D & u) const;
+	const Vecteur2D operator - () const;
 
-	inline double operator * (const Vecteur2D & u) const;
-	inline const Vecteur2D swap() const;
-	inline bool operator == (const Vecteur2D & u) const;
+	double operator * (const Vecteur2D & u) const;
+	const Vecteur2D swap() const;
+	bool operator == (const Vecteur2D & u) const;
 
-	inline const Vecteur2D & operator +=(const Vecteur2D & u);
-	inline const Vecteur2D & operator *=(const double & a);
+	const Vecteur2D & operator +=(const Vecteur2D & u);
+	const Vecteur2D & operator *=(const double & a);
 
 	operator std::string() const;
 

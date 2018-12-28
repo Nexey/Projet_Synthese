@@ -1,5 +1,4 @@
 #include "FormeGeo.h"
-#include "Vecteur2D.h"
 
 const std::string FormeGeo::tabCouleurs[6] = { "BLACK", "BLUE", "RED", "GREEN", "YELLOW", "CYAN" };
 

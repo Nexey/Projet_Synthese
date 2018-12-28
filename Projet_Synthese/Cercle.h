@@ -1,6 +1,5 @@
 #pragma once
 #include "FormeGeoSimple.h"
-#include "Vecteur2D.h"
 
 class Cercle :
 	public FormeGeoSimple {
@@ -16,8 +15,9 @@ public:
 
 	const int getNbSommet() const;
 
+	void translation(const Vecteur2D&v);
+
 	inline const double getRayon() const;
 	virtual const std::string getInfos() const;
 	FormeGeo * clone() const;
 };
-

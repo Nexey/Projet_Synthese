@@ -7,7 +7,7 @@ class Groupe :
 	public FormeGeo {
 	Groupe() = delete;
 
-	std::vector<const FormeGeo*> formes;
+	std::vector<FormeGeo*> formes;
 	int nbForme;
 public:
 	Groupe(const int& c);
@@ -16,8 +16,10 @@ public:
 
 	Groupe& operator+(const FormeGeo&);
 	const FormeGeo& operator[] (const int&) const;
-	const std::vector<const FormeGeo*>& getVector() const;
+	const std::vector<FormeGeo*>& getVector() const;
 
+
+	void translation(const Vecteur2D&);
 	const int getNbSommet() const;
 	virtual const std::string getInfos() const;
 

@@ -23,9 +23,15 @@ const int Triangle::getNbSommet() const {
 	return 3;
 }
 
+void Triangle::translation(const Vecteur2D &v) {
+	p1 += v;
+	p2 += v;
+	p3 += v;
+}
+
 const std::string Triangle::getInfos() const {
 	std::ostringstream oss;
-	oss << FormeGeoSimple::getInfos();
+	oss << FormeGeo::getInfos();
 	oss << "Points : " << std::endl << p1 << std::endl << p2 << std::endl << p3 << std::endl;
 	return oss.str();
 }

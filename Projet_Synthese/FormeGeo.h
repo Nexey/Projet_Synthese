@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include "Vecteur2D.h"
 
 #pragma once
 class FormeGeo {
@@ -29,6 +30,8 @@ public:
 
 	const int getCouleur() const;
 	void setCouleur(const int&);
+
+	virtual void translation(const Vecteur2D&v) = 0;
 
 	virtual const int getNbSommet() const = 0;
 
