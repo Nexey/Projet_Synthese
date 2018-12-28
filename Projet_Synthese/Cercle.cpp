@@ -1,11 +1,14 @@
 #include "Cercle.h"
 
-Cercle::Cercle(const std::string& n, const int& c, const double& r, const Vecteur2D* p) : FormeGeoSimple(n, c, p), rayon(r) {}
+Cercle::Cercle(const std::string& n, const int& c, const double& r, const Vecteur2D& p) : FormeGeoSimple(n, c), rayon(r), p(p) {}
 
-Cercle::Cercle(const Cercle &c) : FormeGeoSimple(c.getNom(), c.getCouleur(), c.getPos()), rayon(c.getRayon()) {
-}
+Cercle::Cercle(const Cercle &c) : FormeGeoSimple(c.getNom(), c.getCouleur()), rayon(c.getRayon()), p(c.getP()) {}
 
 Cercle::~Cercle() {
+}
+
+const Vecteur2D & Cercle::getP() const {
+	return p;
 }
 
 inline const double Cercle::getRayon() const {
@@ -13,9 +16,13 @@ inline const double Cercle::getRayon() const {
 }
 
 const std::string Cercle::getInfos() const {
-	return std::string();
+	std::ostringstream oss;
+	oss << FormeGeoSimple::getInfos();
+	oss << "Rayon : " << std::endl << rayon << std::endl;
+	oss << "Centre : " << std::endl << p << std::endl;
+	return oss.str();
 }
 
 FormeGeo * Cercle::clone() const {
-	return new Cercle(getNom(), getCouleur(), rayon, this->getPos());
+	return new Cercle(getNom(), getCouleur(), rayon, p);
 }

@@ -49,7 +49,10 @@
       <Filter>Fichiers sources\Forme\Forme Simple</Filter>
     </ClCompile>
     <ClCompile Include="Vecteur2D.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Segment.cpp">
+      <Filter>Fichiers sources\Forme\Forme Simple</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -66,7 +69,10 @@
       <Filter>Fichiers d%27en-tête\Forme\Forme simple</Filter>
     </ClInclude>
     <ClInclude Include="Vecteur2D.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment.h">
+      <Filter>Fichiers d%27en-tête\Forme\Forme simple</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
