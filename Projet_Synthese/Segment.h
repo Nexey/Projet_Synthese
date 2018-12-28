@@ -13,6 +13,8 @@ public:
 	const Vecteur2D& getP1() const;
 	const Vecteur2D& getP2() const;
 
+	const int getNbSommet() const;
+
 	virtual const std::string getInfos() const;
 	FormeGeo * clone() const;
 };

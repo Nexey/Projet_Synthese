@@ -19,10 +19,13 @@ const Vecteur2D & Triangle::getP3() const {
 	return p3;
 }
 
+const int Triangle::getNbSommet() const {
+	return 3;
+}
+
 const std::string Triangle::getInfos() const {
 	std::ostringstream oss;
 	oss << FormeGeoSimple::getInfos();
-	oss << "Sommets : " << std::endl << nbSommets << std::endl;
 	oss << "Points : " << std::endl << p1 << std::endl << p2 << std::endl << p3 << std::endl;
 	return oss.str();
 }

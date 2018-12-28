@@ -15,6 +15,10 @@ const Vecteur2D & Segment::getP2() const {
 	return p2;
 }
 
+const int Segment::getNbSommet() const {
+	return 2;
+}
+
 const std::string Segment::getInfos() const {
 	std::ostringstream oss;
 	oss << FormeGeoSimple::getInfos();

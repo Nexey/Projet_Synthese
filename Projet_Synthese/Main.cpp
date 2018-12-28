@@ -1,11 +1,16 @@
 #include "Triangle.h"
 #include "Segment.h"
-#include "Vecteur2D.h"
+#include "Polygone.h"
 
 int main() {
 	FormeGeo *pt = new Triangle("Triangle", FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
 	Triangle t("Triangle", FormeGeo::BLUE, Vecteur2D(1, 5), Vecteur2D(3, 6), Vecteur2D(5, 8));
 	std::cout << *pt << std::endl;
+
+	Polygone p("Polygone", FormeGeo::GREEN);
+	p += Vecteur2D(5, 6) + Vecteur2D(7, 8) + Vecteur2D(0, 5) + Vecteur2D(0, 4) + Vecteur2D(1, 8);
+
+	std::cout << p << std::endl;
 
 	//std::cout << t << std::endl;
 

@@ -11,6 +11,10 @@ const Vecteur2D & Cercle::getP() const {
 	return p;
 }
 
+const int Cercle::getNbSommet() const {
+	return 1;
+}
+
 inline const double Cercle::getRayon() const {
 	return rayon;
 }

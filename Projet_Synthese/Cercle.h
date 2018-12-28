@@ -14,6 +14,8 @@ public:
 
 	const Vecteur2D& getP() const;
 
+	const int getNbSommet() const;
+
 	inline const double getRayon() const;
 	virtual const std::string getInfos() const;
 	FormeGeo * clone() const;

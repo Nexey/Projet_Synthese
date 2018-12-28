@@ -24,5 +24,7 @@ public:
 	virtual const std::string getInfos() const;
 	virtual FormeGeo * clone() const = 0;
 
+	virtual const int getNbSommet() const = 0;
+
 	friend std::ostream& operator<<(std::ostream&, const FormeGeo&);
 };
