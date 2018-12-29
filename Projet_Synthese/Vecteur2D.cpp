@@ -50,6 +50,20 @@ const Vecteur2D & Vecteur2D::operator*=(const double & a) {
 	return *this;
 }
 
+Vecteur2D & Vecteur2D::translation(const Vecteur2D &v) {
+	x += v.x;
+	y += v.y;
+	return *this;
+}
+
+Vecteur2D & Vecteur2D::zoom(const Vecteur2D & o, const double & k) {
+	return *this;
+}
+
+Vecteur2D & Vecteur2D::rotation(const Vecteur2D & c, const double & a) {
+	return *this;
+}
+
 Vecteur2D::operator std::string() const {
 	std::ostringstream os;
 	os << "(" << x << ", " << y << ")";

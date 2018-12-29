@@ -18,8 +18,9 @@ public:
 	const FormeGeo& operator[] (const int&) const;
 	const std::vector<FormeGeo*>& getVector() const;
 
-
 	void translation(const Vecteur2D&);
+	void zoom(const Vecteur2D& o, const double& k);
+	void rotation(const Vecteur2D& c, const double& a);
 	const int getNbSommet() const;
 	virtual const std::string getInfos() const;
 

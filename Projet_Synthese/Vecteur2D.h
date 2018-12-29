@@ -26,6 +26,10 @@ public:
 	const Vecteur2D & operator +=(const Vecteur2D & u);
 	const Vecteur2D & operator *=(const double & a);
 
+	Vecteur2D& translation(const Vecteur2D&);
+	Vecteur2D& zoom(const Vecteur2D&, const double&);
+	Vecteur2D& rotation(const Vecteur2D&, const double&);
+
 	operator std::string() const;
 
 	friend std::ostream & operator << (std::ostream & os, const Vecteur2D & u);

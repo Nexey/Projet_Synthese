@@ -35,6 +35,18 @@ void Groupe::translation(const Vecteur2D &v) {
 		(*it)->translation(v);
 }
 
+void Groupe::zoom(const Vecteur2D & o, const double & k) {
+	std::vector<FormeGeo*>::iterator it = formes.begin();
+	for (it; it < formes.end(); it++)
+		(*it)->zoom(o, k);
+}
+
+void Groupe::rotation(const Vecteur2D & c, const double & a) {
+	std::vector<FormeGeo*>::iterator it = formes.begin();
+	for (it; it < formes.end(); it++)
+		(*it)->rotation(c, a);
+}
+
 const int Groupe::getNbSommet() const {
 	int nbSommet = 0;
 	std::vector<FormeGeo*>::const_iterator it = formes.begin();

@@ -37,6 +37,18 @@
     <Filter Include="Fichiers d%27en-tête\Formes\Formes composées">
       <UniqueIdentifier>{2c232dec-6fdd-43b9-affc-635311835826}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Formes\Formes simples\Polygones">
+      <UniqueIdentifier>{56797c78-f900-427e-9a43-6e7665599dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Formes\Formes simples\Polygones\Formes préconstruites">
+      <UniqueIdentifier>{b72e6516-a1e3-4211-ad31-053fcc5eda13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Formes\Formes simples\Polygones">
+      <UniqueIdentifier>{8f21dab7-7071-45bd-9a8a-383fbf83972c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Formes\Formes simples\Polygones\Formes préconstruites">
+      <UniqueIdentifier>{910a61cd-7f3e-455a-817a-a7b6eb78bb1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FormeGeo.cpp">
@@ -48,23 +60,23 @@
     <ClCompile Include="FormeGeoSimple.cpp">
       <Filter>Fichiers sources\Formes\Formes simples</Filter>
     </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Fichiers sources\Formes\Formes simples</Filter>
-    </ClCompile>
-    <ClCompile Include="Cercle.cpp">
-      <Filter>Fichiers sources\Formes\Formes simples</Filter>
-    </ClCompile>
     <ClCompile Include="Vecteur2D.cpp">
       <Filter>Fichiers sources\Maths</Filter>
     </ClCompile>
-    <ClCompile Include="Segment.cpp">
-      <Filter>Fichiers sources\Formes\Formes simples</Filter>
-    </ClCompile>
-    <ClCompile Include="Polygone.cpp">
-      <Filter>Fichiers sources\Formes\Formes simples</Filter>
-    </ClCompile>
     <ClCompile Include="Groupe.cpp">
       <Filter>Fichiers sources\Formes\Formes composées</Filter>
+    </ClCompile>
+    <ClCompile Include="Cercle.cpp">
+      <Filter>Fichiers sources\Formes\Formes simples\Polygones\Formes préconstruites</Filter>
+    </ClCompile>
+    <ClCompile Include="Segment.cpp">
+      <Filter>Fichiers sources\Formes\Formes simples\Polygones\Formes préconstruites</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Fichiers sources\Formes\Formes simples\Polygones\Formes préconstruites</Filter>
+    </ClCompile>
+    <ClCompile Include="Polygone.cpp">
+      <Filter>Fichiers sources\Formes\Formes simples\Polygones</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -74,23 +86,23 @@
     <ClInclude Include="FormeGeoSimple.h">
       <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
     </ClInclude>
-    <ClInclude Include="Triangle.h">
-      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
-    </ClInclude>
-    <ClInclude Include="Cercle.h">
-      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
-    </ClInclude>
     <ClInclude Include="Vecteur2D.h">
       <Filter>Fichiers d%27en-tête\Maths</Filter>
     </ClInclude>
-    <ClInclude Include="Segment.h">
-      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
-    </ClInclude>
-    <ClInclude Include="Polygone.h">
-      <Filter>Fichiers d%27en-tête\Formes\Formes simples</Filter>
-    </ClInclude>
     <ClInclude Include="Groupe.h">
       <Filter>Fichiers d%27en-tête\Formes\Formes composées</Filter>
+    </ClInclude>
+    <ClInclude Include="Polygone.h">
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples\Polygones</Filter>
+    </ClInclude>
+    <ClInclude Include="Cercle.h">
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples\Polygones\Formes préconstruites</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment.h">
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples\Polygones\Formes préconstruites</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Fichiers d%27en-tête\Formes\Formes simples\Polygones\Formes préconstruites</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

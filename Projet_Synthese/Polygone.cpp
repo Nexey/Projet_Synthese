@@ -2,14 +2,21 @@
 
 Polygone::Polygone(const int & c) : FormeGeoSimple("Polygone", c), nbPoint(0) {}
 
+Polygone::Polygone(const std::string& n, const int & c) : FormeGeoSimple(n, c), nbPoint(0) {}
+
 Polygone::Polygone(const Polygone &p) : FormeGeoSimple(p.getDesig(), p.getCouleur()), nbPoint(0) {
 	std::vector<Vecteur2D>::const_iterator it = p.getVector().begin();
 	for (it; it < p.getVector().end(); it++)
-		*this = *this + *it;
+		addPoint(*it);
 }
 
 Polygone::~Polygone() {
 	points.clear();
+}
+
+void Polygone::addPoint(const Vecteur2D &v) {
+	points.push_back(Vecteur2D(v));
+	nbPoint++;
 }
 
 Polygone & Polygone::operator+(const Vecteur2D &v) {
@@ -37,7 +44,19 @@ const int Polygone::getNbSommet() const {
 void Polygone::translation(const Vecteur2D &v) {
 	std::vector<Vecteur2D>::iterator it = points.begin();
 	for (it; it < points.end(); it++)
-		*it += v;
+		it->translation(v);
+}
+
+void Polygone::zoom(const Vecteur2D & o, const double & k) {
+	std::vector<Vecteur2D>::iterator it = points.begin();
+	for (it; it < points.end(); it++)
+		it->zoom(o, k);
+}
+
+void Polygone::rotation(const Vecteur2D & c, const double & a) {
+	std::vector<Vecteur2D>::iterator it = points.begin();
+	for (it; it < points.end(); it++)
+		it->rotation(c, a);
 }
 
 const std::string Polygone::getInfos() const {

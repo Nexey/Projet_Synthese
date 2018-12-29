@@ -1,23 +1,12 @@
 #include "Cercle.h"
 
-Cercle::Cercle(const int& c, const double& r, const Vecteur2D& p) : FormeGeoSimple("Cercle", c), rayon(r), p(p) {}
-
-Cercle::Cercle(const Cercle &c) : FormeGeoSimple(c.getDesig(), c.getCouleur()), rayon(c.getRayon()), p(c.getP()) {}
-
-Cercle::~Cercle() {
+Cercle::Cercle(const int& c, const double& r, const Vecteur2D& p) : Polygone("Cercle", c), rayon(r) {
+	addPoint(p);
 }
 
-const Vecteur2D & Cercle::getP() const {
-	return p;
-}
+Cercle::Cercle(const Cercle &c) : Polygone(c.getDesig(), c.getCouleur()), rayon(c.getRayon()) {}
 
-const int Cercle::getNbSommet() const {
-	return 1;
-}
-
-void Cercle::translation(const Vecteur2D &v) {
-	p += v;
-}
+Cercle::~Cercle() {}
 
 inline const double Cercle::getRayon() const {
 	return rayon;
@@ -25,9 +14,8 @@ inline const double Cercle::getRayon() const {
 
 const std::string Cercle::getInfos() const {
 	std::ostringstream oss;
-	oss << FormeGeo::getInfos();
+	oss << Polygone::getInfos();
 	oss << "Rayon : " << std::endl << rayon << std::endl;
-	oss << "Centre : " << std::endl << p << std::endl;
 	return oss.str();
 }
 

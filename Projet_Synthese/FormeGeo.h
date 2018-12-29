@@ -31,7 +31,9 @@ public:
 	const int getCouleur() const;
 	void setCouleur(const int&);
 
-	virtual void translation(const Vecteur2D&v) = 0;
+	virtual void translation(const Vecteur2D& v) = 0;
+	virtual void zoom(const Vecteur2D& o, const double& k) = 0;
+	virtual void rotation(const Vecteur2D& o, const double& a) = 0;
 
 	virtual const int getNbSommet() const = 0;
 
