@@ -57,6 +57,8 @@ Vecteur2D & Vecteur2D::translation(const Vecteur2D &v) {
 }
 
 Vecteur2D & Vecteur2D::zoom(const Vecteur2D & o, const double & k) {
+	x = (x - o.x) * k + o.x;
+	y = (y - o.y) * k + o.y;
 	return *this;
 }
 

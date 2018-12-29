@@ -10,7 +10,7 @@ int main() {
 	std::cout << *pt << std::endl;
 	std::cout << *pt->clone() << std::endl;
 
-	/*Polygone p(FormeGeo::GREEN);
+	Polygone p(FormeGeo::GREEN);
 	p = p + Vecteur2D(5, 6) + Vecteur2D(7, 8) + Vecteur2D(0, 5) + Vecteur2D(0, 4) + Vecteur2D(1, 8);
 	std::cout << p << std::endl;
 	//std::cout << *p.clone() << std::endl;
@@ -26,7 +26,7 @@ int main() {
 
 	g1.translation(Vecteur2D(1, 1));
 	std::cout << g1 << std::endl;
-	*/
+	
 
 	system("pause");
 	//delete tmp;

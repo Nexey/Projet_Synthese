@@ -4,7 +4,11 @@ Cercle::Cercle(const int& c, const double& r, const Vecteur2D& p) : Polygone("Ce
 	addPoint(p);
 }
 
-Cercle::Cercle(const Cercle &c) : Polygone(c.getDesig(), c.getCouleur()), rayon(c.getRayon()) {}
+Cercle::Cercle(const Cercle &c) : Polygone(c.getDesig(), c.getCouleur()), rayon(c.getRayon()) {
+	std::vector<Vecteur2D>::const_iterator it = c.getVector().begin();
+	for (it; it < c.getVector().end(); it++)
+		addPoint(*it);
+}
 
 Cercle::~Cercle() {}
 

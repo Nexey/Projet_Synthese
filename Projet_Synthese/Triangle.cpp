@@ -6,8 +6,11 @@ Triangle::Triangle(const int& c, const Vecteur2D& p1, const Vecteur2D& p2, const
 	addPoint(p3);
 }
 
-Triangle::Triangle(const Triangle &t)
-	: Polygone(*this) {}
+Triangle::Triangle(const Triangle &t) : Polygone(t.getDesig(), t.getCouleur()) {
+	std::vector<Vecteur2D>::const_iterator it = t.getVector().begin();
+	for (it; it < t.getVector().end(); it++)
+		addPoint(*it);
+}
 
 Triangle::~Triangle() {}
 
