@@ -3,10 +3,15 @@
 #include "Polygone.h"
 #include "Groupe.h"
 #include "SauvegardeTexte.h"
+#include <fstream>
 
 #include <Windows.h> // Pour les accents dans la console sous Windows
 int main() {
 	SetConsoleOutputCP(1252); // Pour les accents dans la console sous Windows
+
+	// Remet à 0 le fichier de sauvegarde
+	std::ofstream output("formes.txt");
+
 	FormeGeo *pt = new Triangle(FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
 	std::cout << *pt << std::endl;
 	std::cout << *pt->clone() << std::endl;
@@ -27,20 +32,18 @@ int main() {
 
 	g1.translation(Vecteur2D(1, 1));
 	std::cout << g1 << std::endl;
-	std::cout << std::endl << std::endl;
-	std::cout << std::endl << std::endl;
-	std::cout << std::endl << std::endl;
 
 	IVisiteur *save = new SauvegardeTexte();
-
 	Cercle c(FormeGeo::BLACK, 3., Vecteur2D(0, 0));
 
 	tmp->accepter(save);
 	p.accepter(save);
 	c.accepter(save);
+	g1.accepter(save);
 
 	system("pause");
 	delete tmp;
 	delete pt;
+	output.close();
 	exit(0);
 }
