@@ -9,6 +9,9 @@ public:
 	Segment(const Segment&);
 	virtual ~Segment();
 
+	void addPoint(const Vecteur2D&);
+
+	FormeGeo* accepter(IVisiteur *v);
 	FormeGeo * clone() const;
 };
 

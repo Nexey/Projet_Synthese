@@ -49,6 +49,18 @@
     <Filter Include="Fichiers sources\Formes\Formes simples\Polygones\Formes préconstruites">
       <UniqueIdentifier>{910a61cd-7f3e-455a-817a-a7b6eb78bb1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteur">
+      <UniqueIdentifier>{29587a61-d52d-490b-b9f3-e1667e5c0c80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Visiteur">
+      <UniqueIdentifier>{2a599bd1-ab5f-4061-9623-4bcc2ab09dee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteur\Sauvegarde">
+      <UniqueIdentifier>{8d14dab6-35ad-4b13-b25c-947bd7658cbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Visiteur\Sauvegarde">
+      <UniqueIdentifier>{cb39d79d-c068-47ac-ba34-084b1dcc864d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FormeGeo.cpp">
@@ -78,6 +90,15 @@
     <ClCompile Include="Polygone.cpp">
       <Filter>Fichiers sources\Formes\Formes simples\Polygones</Filter>
     </ClCompile>
+    <ClCompile Include="IVisiteur.cpp">
+      <Filter>Fichiers sources\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurSauvegarde.cpp">
+      <Filter>Fichiers sources\Visiteur\Sauvegarde</Filter>
+    </ClCompile>
+    <ClCompile Include="SauvegardeTexte.cpp">
+      <Filter>Fichiers sources\Visiteur\Sauvegarde</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FormeGeo.h">
@@ -103,6 +124,15 @@
     </ClInclude>
     <ClInclude Include="Triangle.h">
       <Filter>Fichiers d%27en-tête\Formes\Formes simples\Polygones\Formes préconstruites</Filter>
+    </ClInclude>
+    <ClInclude Include="IVisiteur.h">
+      <Filter>Fichiers d%27en-tête\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurSauvegarde.h">
+      <Filter>Fichiers d%27en-tête\Visiteur\Sauvegarde</Filter>
+    </ClInclude>
+    <ClInclude Include="SauvegardeTexte.h">
+      <Filter>Fichiers d%27en-tête\Visiteur\Sauvegarde</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

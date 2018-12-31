@@ -11,6 +11,10 @@ public:
 	Triangle(const int& c, const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3);
 	Triangle(const Triangle&);
 	virtual ~Triangle();
+
+	void addPoint(const Vecteur2D&);
+
+	FormeGeo* accepter(IVisiteur *v);
 	FormeGeo * clone() const;
 };
 

@@ -24,6 +24,7 @@ public:
 	const int getNbSommet() const;
 	virtual const std::string getInfos() const;
 
+	FormeGeo* accepter(IVisiteur *v);
 	FormeGeo * clone() const;
 };
 

@@ -1,4 +1,5 @@
 #include "Triangle.h"
+#include "IVisiteur.h"
 
 Triangle::Triangle(const int& c, const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3) : Polygone("Triangle", c) {
 	addPoint(p1);
@@ -13,6 +14,15 @@ Triangle::Triangle(const Triangle &t) : Polygone(t.getDesig(), t.getCouleur()) {
 }
 
 Triangle::~Triangle() {}
+
+void Triangle::addPoint(const Vecteur2D &v) {
+	if (getNbSommet() >= 3) std::cout << "Impossible d'ajouter de nouveaux sommets !";
+	else Polygone::addPoint(v);
+}
+
+FormeGeo * Triangle::accepter(IVisiteur * v) {
+	return v->visite(this);
+}
 
 FormeGeo * Triangle::clone() const {
 	return new Triangle(*this);

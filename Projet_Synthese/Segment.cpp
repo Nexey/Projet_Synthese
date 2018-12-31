@@ -1,4 +1,5 @@
 #include "Segment.h"
+#include "IVisiteur.h"
 
 Segment::Segment(const int & c, const Vecteur2D& p1, const Vecteur2D& p2) : Polygone("Segment", c) {
 	addPoint(p1);
@@ -12,6 +13,15 @@ Segment::Segment(const Segment &s) : Polygone(s.getDesig(), s.getCouleur()) {
 }
 
 Segment::~Segment() {}
+
+void Segment::addPoint(const Vecteur2D &v) {
+	if (getNbSommet() >= 2) std::cout << "Impossible d'ajouter de nouveaux sommets !";
+	else Polygone::addPoint(v);
+}
+
+FormeGeo * Segment::accepter(IVisiteur * v) {
+	return v->visite(this);
+}
 
 FormeGeo * Segment::clone() const {
 	return new Segment(*this);

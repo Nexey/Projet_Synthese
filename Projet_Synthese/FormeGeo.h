@@ -3,6 +3,8 @@
 #include <sstream>
 #include "Vecteur2D.h"
 
+class IVisiteur;
+
 #pragma once
 class FormeGeo {
 	std::string desig;
@@ -36,6 +38,8 @@ public:
 	virtual void rotation(const Vecteur2D& o, const double& a) = 0;
 
 	virtual const int getNbSommet() const = 0;
+
+	virtual FormeGeo* accepter(IVisiteur *v) = 0;
 
 	friend std::ostream& operator<<(std::ostream&, const FormeGeo&);
 };

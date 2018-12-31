@@ -1,4 +1,5 @@
 #include "Groupe.h"
+#include "IVisiteur.h"
 
 Groupe::Groupe(const int & c) : FormeGeo("Groupe", c), nbForme(0) {}
 
@@ -64,6 +65,10 @@ const std::string Groupe::getInfos() const {
 	for (it; it < formes.end(); it++, i++)
 		oss << std:: endl << "Forme numéro : " << i << std::endl << (*it)->getInfos();
 	return oss.str();
+}
+
+FormeGeo * Groupe::accepter(IVisiteur * v) {
+	return v->visite(this);
 }
 
 FormeGeo * Groupe::clone() const {

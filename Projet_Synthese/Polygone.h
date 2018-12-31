@@ -13,7 +13,7 @@ public:
 	Polygone(const Polygone&);
 	virtual ~Polygone();
 
-	void addPoint(const Vecteur2D&);
+	virtual void addPoint(const Vecteur2D&);
 	Polygone& operator+(const Vecteur2D&);
 	Polygone& operator+=(const Vecteur2D&);
 
@@ -27,5 +27,6 @@ public:
 	void zoom(const Vecteur2D& o, const double& k);
 	void rotation(const Vecteur2D& c, const double& a);
 	virtual const std::string getInfos() const;
+	FormeGeo* accepter(IVisiteur *v);
 	FormeGeo * clone() const;
 };

@@ -1,4 +1,5 @@
 #include "Polygone.h"
+#include "IVisiteur.h"
 
 Polygone::Polygone(const int & c) : FormeGeoSimple("Polygone", c), nbPoint(0) {}
 
@@ -20,8 +21,7 @@ void Polygone::addPoint(const Vecteur2D &v) {
 }
 
 Polygone & Polygone::operator+(const Vecteur2D &v) {
-	points.push_back(Vecteur2D(v));
-	nbPoint++;
+	addPoint(v);
 	return *this;
 }
 
@@ -67,6 +67,10 @@ const std::string Polygone::getInfos() const {
 	for (it; it < points.end(); it++)
 		oss << *it << std::endl;
 	return oss.str();
+}
+
+FormeGeo * Polygone::accepter(IVisiteur * v) {
+	return v->visite(this);
 }
 
 FormeGeo * Polygone::clone() const {

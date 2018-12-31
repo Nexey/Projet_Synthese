@@ -2,6 +2,7 @@
 #include "Segment.h"
 #include "Polygone.h"
 #include "Groupe.h"
+#include "SauvegardeTexte.h"
 
 #include <Windows.h> // Pour les accents dans la console sous Windows
 int main() {
@@ -26,10 +27,20 @@ int main() {
 
 	g1.translation(Vecteur2D(1, 1));
 	std::cout << g1 << std::endl;
-	
+	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl;
+
+	IVisiteur *save = new SauvegardeTexte();
+
+	Cercle c(FormeGeo::BLACK, 3., Vecteur2D(0, 0));
+
+	tmp->accepter(save);
+	p.accepter(save);
+	c.accepter(save);
 
 	system("pause");
-	//delete tmp;
+	delete tmp;
 	delete pt;
 	exit(0);
 }
