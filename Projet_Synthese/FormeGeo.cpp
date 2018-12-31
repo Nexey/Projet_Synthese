@@ -17,6 +17,7 @@ const std::string FormeGeo::getInfos() const {
 	oss << "Désignation : " << std::endl << desig << std::endl;
 	oss << "Couleur : " << std::endl << FormeGeo::tabCouleurs[couleur] << std::endl;
 	oss << "Nombre de sommets : " << std::endl << getNbSommet() << std::endl;
+	oss << "Fin" << std::endl;
 	return oss.str();
 }
 
