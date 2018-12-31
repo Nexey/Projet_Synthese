@@ -99,6 +99,9 @@
     <ClCompile Include="SauvegardeTexte.cpp">
       <Filter>Fichiers sources\Visiteur\Sauvegarde</Filter>
     </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FormeGeo.h">
@@ -133,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="SauvegardeTexte.h">
       <Filter>Fichiers d%27en-tête\Visiteur\Sauvegarde</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

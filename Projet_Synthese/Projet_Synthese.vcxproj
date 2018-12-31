@@ -120,6 +120,7 @@
     <ClInclude Include="FormeGeoSimple.h" />
     <ClInclude Include="Groupe.h" />
     <ClInclude Include="IVisiteur.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Polygone.h" />
     <ClInclude Include="SauvegardeTexte.h" />
     <ClInclude Include="Segment.h" />
@@ -134,6 +135,7 @@
     <ClCompile Include="Groupe.cpp" />
     <ClCompile Include="IVisiteur.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="SauvegardeTexte.cpp" />
     <ClCompile Include="Segment.cpp" />

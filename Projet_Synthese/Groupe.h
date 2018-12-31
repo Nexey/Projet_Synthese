@@ -8,7 +8,6 @@ class Groupe :
 	Groupe() = delete;
 
 	std::vector<FormeGeo*> formes;
-	int nbForme;
 public:
 	Groupe(const int& c);
 	Groupe(const Groupe&);

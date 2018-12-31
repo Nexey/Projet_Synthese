@@ -1,8 +1,4 @@
-#include "Triangle.h"
-#include "Segment.h"
-#include "Polygone.h"
-#include "Groupe.h"
-#include "SauvegardeTexte.h"
+#include "Menu.h"
 #include <fstream>
 
 #include <Windows.h> // Pour les accents dans la console sous Windows
@@ -12,6 +8,10 @@ int main() {
 	// Remet à 0 le fichier de sauvegarde
 	std::ofstream output("formes.txt");
 
+	Menu menu;
+	menu.sauvegarder();
+
+	/*
 	FormeGeo *pt = new Triangle(FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
 	std::cout << *pt << std::endl;
 	std::cout << *pt->clone() << std::endl;
@@ -41,9 +41,11 @@ int main() {
 	c.accepter(save);
 	g1.accepter(save);
 
-	system("pause");
 	delete tmp;
 	delete pt;
+
+	*/
+	system("pause");
 	output.close();
 	exit(0);
 }

@@ -1,11 +1,11 @@
 #include "Polygone.h"
 #include "IVisiteur.h"
 
-Polygone::Polygone(const int & c) : FormeGeoSimple("Polygone", c), nbPoint(0) {}
+Polygone::Polygone(const int & c) : FormeGeoSimple("Polygone", c) {}
 
-Polygone::Polygone(const std::string& n, const int & c) : FormeGeoSimple(n, c), nbPoint(0) {}
+Polygone::Polygone(const std::string& n, const int & c) : FormeGeoSimple(n, c) {}
 
-Polygone::Polygone(const Polygone &p) : FormeGeoSimple(p.getDesig(), p.getCouleur()), nbPoint(0) {
+Polygone::Polygone(const Polygone &p) : FormeGeoSimple(p.getDesig(), p.getCouleur()) {
 	std::vector<Vecteur2D>::const_iterator it = p.getVector().begin();
 	for (it; it < p.getVector().end(); it++)
 		addPoint(*it);
@@ -17,7 +17,6 @@ Polygone::~Polygone() {
 
 void Polygone::addPoint(const Vecteur2D &v) {
 	points.push_back(Vecteur2D(v));
-	nbPoint++;
 }
 
 Polygone & Polygone::operator+(const Vecteur2D &v) {
@@ -38,7 +37,7 @@ const std::vector<Vecteur2D>& Polygone::getVector() const {
 }
 
 const int Polygone::getNbSommet() const {
-	return nbPoint;
+	return points.size();
 }
 
 void Polygone::translation(const Vecteur2D &v) {

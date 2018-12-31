@@ -6,7 +6,6 @@ class Polygone :
 	public FormeGeoSimple {
 	Polygone() = delete;
 	std::vector<Vecteur2D> points;
-	int nbPoint;
 public:
 	Polygone(const int& c);
 	Polygone(const std::string& n, const int& c);

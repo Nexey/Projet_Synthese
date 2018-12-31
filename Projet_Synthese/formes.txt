@@ -1,81 +1,12 @@
 Désignation : 
-Triangle
-Couleur : 
-BLACK
-Nombre de sommets : 
-3
-Points : 
-(0, 0)
-(0, 4)
-(4, 0)
-
-Désignation : 
-Polygone
-Couleur : 
-GREEN
-Nombre de sommets : 
-5
-Points : 
-(5, 6)
-(7, 8)
-(0, 5)
-(0, 4)
-(1, 8)
-
-Désignation : 
 Cercle
 Couleur : 
-BLACK
+BLUE
 Nombre de sommets : 
 1
+Fin
 Points : 
 (0, 0)
 Rayon : 
-3
-
-Désignation : 
-Groupe
-Couleur : 
-BLUE
-Nombre de sommets : 
-10
-Nombres de formes : 
-3
-
-Forme numéro : 1
-Désignation : 
-Polygone
-Couleur : 
-BLUE
-Nombre de sommets : 
-5
-Points : 
-(6, 7)
-(8, 9)
-(1, 6)
-(1, 5)
-(2, 9)
-
-Forme numéro : 2
-Désignation : 
-Segment
-Couleur : 
-BLUE
-Nombre de sommets : 
-2
-Points : 
-(6, 6)
-(1, 1)
-
-Forme numéro : 3
-Désignation : 
-Triangle
-Couleur : 
-BLUE
-Nombre de sommets : 
-3
-Points : 
-(1, 1)
-(1, 5)
-(5, 1)
+1
 
