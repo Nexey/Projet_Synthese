@@ -84,6 +84,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -108,6 +109,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -116,6 +118,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
+    <ClInclude Include="ClientDessin.h" />
     <ClInclude Include="Erreur.h" />
     <ClInclude Include="FormeGeo.h" />
     <ClInclude Include="FormeGeoSimple.h" />
@@ -132,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="ClientDessin.cpp" />
     <ClCompile Include="Erreur.cpp" />
     <ClCompile Include="FormeGeo.cpp" />
     <ClCompile Include="FormeGeoSimple.cpp" />
