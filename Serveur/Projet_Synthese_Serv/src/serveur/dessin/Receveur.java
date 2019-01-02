@@ -18,9 +18,13 @@ public class Receveur extends Thread {
 		System.out.println("Forme " + requete + " reçue");
 	}
 	public void run() {
+		String ligne;
+		String requete = "";
 		try {
 			//while(!this.isInterrupted()) {
-				String requete = in.readLine();
+				//String requete = in.readLine();
+				while ((ligne = in.readLine()) != null)
+					requete += ligne;
 				expert(requete);
 			//}
 		} catch (Exception e) {

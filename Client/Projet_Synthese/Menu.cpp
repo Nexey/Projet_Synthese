@@ -2,6 +2,7 @@
 
 Menu::Menu() {
 	visiSauvegarde = new SauvegardeTexte();
+	visiDessin = new VisiteurDessin();
 	show();
 }
 
@@ -13,7 +14,7 @@ const void Menu::show() {
 	int choix;
 	std::cout << "Sélectionnez la forme à dessiner" << std::endl;
 	std::cout << Menu::CERCLE << ")\tCercle" << std::endl << Menu::SEGMENT << ")\tSegment" << std::endl << Menu::TRIANGLE << ")\tTriangle" << std::endl
-		<< Menu::POLYGONE << ")\tPolygone" << std::endl << Menu::GROUPE << ")\tGroupe" << std::endl << "6) Dessiner les formes sauvegardées"
+		<< Menu::POLYGONE << ")\tPolygone" << std::endl << Menu::GROUPE << ")\tGroupe" << std::endl << "6)\tDessiner les formes sauvegardées"
 		<< std::endl << "0)\tQuitter" << std::endl;
 	do {
 		inputVar(choix);
@@ -25,7 +26,13 @@ const void Menu::show() {
 		}
 		else {
 			//TDO : Appel à la méthode de dessin
-			
+			std::vector<FormeGeo*>::const_iterator it = formes.begin();
+			for (it; it < formes.end(); it++)
+				try {
+					(*it)->accepter(visiDessin);
+			} catch (Erreur e) {
+				std::cerr << e.message << std::endl;
+			}
 		}
 		Menu::show();
 	}
@@ -49,7 +56,7 @@ const int Menu::inputCouleur() const {
 }
 
 FormeGeo * Menu::inputForme(int choix, int couleur) const {
-	std::vector<Vecteur2D> points;// = new std::vector<Vecteur2D>();
+	std::vector<Vecteur2D> points;
 	if (couleur == -1)
 		couleur = inputCouleur();
 	

@@ -6,18 +6,9 @@
  */
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 
+#include "ClientDessin.h"
 #include <sstream>
 #include "Erreur.h"
-#include "MaWinsock.h"
-#include "ClientDessin.h"
-
-/**
- * crée un client TCP/IP vers un serveur de dessin
- *
- * protocole : Chaque requête est codée sous forme d'une seule String se terminant par le caractère fin de ligne.
- * Sur la ligne, 2 paramètres consécutifs sont séparés par ", ".
- *
- * */
 
 ClientDessin::ClientDessin(const std::string & adresseServeurDessin, const int portServeurDessin) {
 	MaWinsock::getInstance();	// initialisation de la DLL : effectuée une seule fois
@@ -71,7 +62,7 @@ ClientDessin::~ClientDessin() {
 	std::cout << "arrêt normal du client" << std::endl;
 }
 
-void ClientDessin::dessinerForme(const std::string & req) {
+void ClientDessin::dessinerForme(const std::string & req) const {
 	int r = send(sock, req.c_str(), (int)req.length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
 	if (r == SOCKET_ERROR)

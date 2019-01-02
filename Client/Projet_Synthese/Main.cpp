@@ -13,13 +13,6 @@ int main() {
 	std::ofstream output("formes.txt");
 
 	Menu menu;
-	try {
-		ClientDessin client("192.168.0.20", 10000);
-		client.dessinerForme((std::string)menu);
-	}
-	catch (Erreur e) {
-		std::cerr << e.message << std::endl;
-	}
 	/*
 	FormeGeo *pt = new Triangle(FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
 	std::cout << *pt << std::endl;

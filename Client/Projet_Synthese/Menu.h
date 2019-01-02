@@ -3,13 +3,15 @@
 #include "Segment.h"
 #include "Triangle.h"
 #include "Groupe.h"
-#include <memory>
 #include "SauvegardeTexte.h"
+#include "VisiteurDessin.h"
+#include "Erreur.h"
 
 class Menu {
 	//std::vector<std::unique_ptr<Cercle*>> formes;
 
 	IVisiteur *visiSauvegarde;
+	IVisiteur *visiDessin;
 	std::vector<FormeGeo*> formes;
 public:
 	const static int

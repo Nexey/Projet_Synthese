@@ -8,6 +8,7 @@
 
 #include <string>
 #include <string.h>
+#include "MaWinsock.h"
 
 class ClientDessin {
 	SOCKET sock;  // informations concernant le socket à créer : famille d'adresses acceptées, mode connecté ou non, protocole 
@@ -17,5 +18,5 @@ public:
 	ClientDessin(const std::string & adresseServeurDessin, const int portServeurDessin);
 	~ClientDessin();
 
-	void dessinerForme(const std::string& req);
+	void dessinerForme(const std::string& req) const;
 };
