@@ -3,6 +3,12 @@
 
 Groupe::Groupe(const int & c) : FormeGeo("Groupe", c) {}
 
+Groupe::Groupe(const int & c, const std::vector<FormeGeo*> f) : FormeGeo("Groupe", c) {
+	std::vector<FormeGeo*>::const_iterator it = f.begin();
+	for (it; it < f.end(); it++)
+		addForme(**it);
+}
+
 Groupe::Groupe(const Groupe &g) : FormeGeo(g.getDesig(), g.getCouleur()) {
 	std::vector<FormeGeo*>::const_iterator it = g.getVector().begin();
 	for (it; it < g.getVector().end(); it++)
@@ -13,11 +19,15 @@ Groupe::~Groupe() {
 	formes.clear();
 }
 
-Groupe& Groupe::operator+(const FormeGeo &f) {
+void Groupe::addForme(const FormeGeo &f) {
 	// Le fait de cloner la forme fait qu'une même forme n'appartient pas à plusieurs groupes
 	FormeGeo * tmp = f.clone();
 	tmp->setCouleur(getCouleur());
 	formes.push_back(tmp);
+}
+
+Groupe& Groupe::operator+(const FormeGeo &f) {
+	addForme(f);
 	return *this;
 }
 
@@ -63,6 +73,7 @@ const std::string Groupe::getInfos() const {
 	int i = 1;
 	for (it; it < formes.end(); it++, i++)
 		oss << std:: endl << "Forme numéro : " << i << std::endl << (*it)->getInfos();
+	oss << "Fin" << std::endl;
 	return oss.str();
 }
 

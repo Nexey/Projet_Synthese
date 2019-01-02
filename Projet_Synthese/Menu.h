@@ -26,9 +26,10 @@ public:
 	template<class T>
 	const void inputVar(T&) const;
 	const int inputCouleur() const;
-	FormeGeo* inputForme(const int) const;
+	FormeGeo* inputForme(int choix, int couleur = -1) const;
 
 	const std::vector<Vecteur2D>* inputPoints(int nbPoints = 0) const;
+	const std::vector<FormeGeo*>* inputGroupe(const int nbFormes, const int couleur) const;
 
 	const void sauvegarder() const;
 };

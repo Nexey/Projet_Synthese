@@ -1,6 +1,5 @@
 #pragma once
 #include "FormeGeo.h"
-#include "Vecteur2D.h"
 #include <vector>
 
 class Groupe :
@@ -10,9 +9,11 @@ class Groupe :
 	std::vector<FormeGeo*> formes;
 public:
 	Groupe(const int& c);
+	Groupe(const int& c, const std::vector<FormeGeo*>);
 	Groupe(const Groupe&);
 	virtual ~Groupe();
 
+	void addForme(const FormeGeo&);
 	Groupe& operator+(const FormeGeo&);
 	const FormeGeo& operator[] (const int&) const;
 	const std::vector<FormeGeo*>& getVector() const;

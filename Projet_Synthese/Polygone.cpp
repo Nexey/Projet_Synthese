@@ -3,6 +3,12 @@
 
 Polygone::Polygone(const int & c) : FormeGeoSimple("Polygone", c) {}
 
+Polygone::Polygone(const int & c, const std::vector<Vecteur2D> points) : FormeGeoSimple("Polygone", c) {
+	std::vector<Vecteur2D>::const_iterator it = points.begin();
+	for (it; it < points.end(); it++)
+		addPoint(*it);
+}
+
 Polygone::Polygone(const std::string& n, const int & c) : FormeGeoSimple(n, c) {}
 
 Polygone::Polygone(const Polygone &p) : FormeGeoSimple(p.getDesig(), p.getCouleur()) {

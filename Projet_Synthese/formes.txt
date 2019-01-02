@@ -1,12 +1,68 @@
 Désignation : 
-Cercle
+Groupe
 Couleur : 
-BLUE
+YELLOW
 Nombre de sommets : 
-1
-Fin
+11
+Nombres de formes : 
+3
+
+Forme numéro : 1
+Désignation : 
+Groupe
+Couleur : 
+YELLOW
+Nombre de sommets : 
+4
+Nombres de formes : 
+2
+
+Forme numéro : 1
+Désignation : 
+Triangle
+Couleur : 
+YELLOW
+Nombre de sommets : 
+3
 Points : 
 (0, 0)
-Rayon : 
+(0, 4)
+(4, 0)
+
+Forme numéro : 2
+Désignation : 
+Cercle
+Couleur : 
+YELLOW
+Nombre de sommets : 
 1
+Points : 
+(5, 5)
+Rayon : 
+3
+
+Forme numéro : 2
+Désignation : 
+Polygone
+Couleur : 
+YELLOW
+Nombre de sommets : 
+5
+Points : 
+(1, 0)
+(2, 2)
+(3, 3)
+(4, 8)
+(9, 5)
+
+Forme numéro : 3
+Désignation : 
+Segment
+Couleur : 
+YELLOW
+Nombre de sommets : 
+2
+Points : 
+(4, 4)
+(4, 8)
 

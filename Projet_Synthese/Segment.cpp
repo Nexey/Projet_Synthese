@@ -23,6 +23,13 @@ FormeGeo * Segment::accepter(IVisiteur * v) {
 	return v->visite(this);
 }
 
+const std::string Segment::getInfos() const {
+	std::ostringstream oss;
+	oss << Polygone::getInfos();
+	oss << "Fin" << std::endl;
+	return oss.str();
+}
+
 FormeGeo * Segment::clone() const {
 	return new Segment(*this);
 }

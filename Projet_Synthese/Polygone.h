@@ -8,6 +8,7 @@ class Polygone :
 	std::vector<Vecteur2D> points;
 public:
 	Polygone(const int& c);
+	Polygone(const int& c, const std::vector<Vecteur2D>);
 	Polygone(const std::string& n, const int& c);
 	Polygone(const Polygone&);
 	virtual ~Polygone();

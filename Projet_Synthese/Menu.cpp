@@ -17,7 +17,10 @@ const void Menu::show() {
 	do {
 		inputVar(choix);
 	} while (choix < 0 || choix > 5);
-	formes.push_back(inputForme(choix));
+	if (choix != 0) {
+		formes.push_back(inputForme(choix));
+		Menu::show();
+	}
 }
 
 template<class T>
@@ -28,50 +31,55 @@ const void Menu::inputVar(T& var) const {
 const int Menu::inputCouleur() const {
 	int couleur;
 	std::cout << "Sélectionnez la couleur : " << std::endl;
-	for (int i = 0; i < 6; i++)
+	for (int i = FormeGeo::BLACK; i <= FormeGeo::CYAN; i++)
 		std::cout << i << ") " << FormeGeo::tabCouleurs[i] << std::endl;
 	do {
 		inputVar(couleur);
-	} while (couleur < 0 || couleur > 5);
+	} while (couleur < FormeGeo::BLACK || couleur > FormeGeo::CYAN);
 	// Couleur prête
 	return couleur;
 }
 
-FormeGeo * Menu::inputForme(const int choix) const {
-	std::vector<Vecteur2D> * points = new std::vector<Vecteur2D>();
-	int couleur;
-	FormeGeo * f;
+FormeGeo * Menu::inputForme(int choix, int couleur) const {
+	std::vector<Vecteur2D> points;// = new std::vector<Vecteur2D>();
+	if (couleur == -1)
+		couleur = inputCouleur();
+	
 	switch (choix) {
 	case Menu::CERCLE:
-		points->assign(*inputPoints(1));
-		couleur = inputCouleur();
+		points = *inputPoints(1);
 		double r;
+		std::cout << "Rentrez le rayon du cercle : " << std::endl;
 		do {
 			inputVar(r);
 		} while (r <= 0);
-		f = new Cercle(couleur, r, points.at(0));
+		return new Cercle(couleur, r, points.at(0));
 		break;
 	case Menu::SEGMENT:
-		points = inputPoints(2);
-
+		points = *inputPoints(2);
+		return new Segment(couleur, points.at(0), points.at(1));
 		break;
 	case Menu::TRIANGLE:
-		points = inputPoints(3);
-
+		points = *inputPoints(3);
+		return new Triangle(couleur, points.at(0), points.at(1), points.at(2));
 		break;
 	case Menu::POLYGONE:
-		points = inputPoints();
-
+		points = *inputPoints();
+		return new Polygone(couleur, points);
 		break;
 	case Menu::GROUPE:
+		std::cout << "Combien de formes voulez-vous rentrer ?" << std::endl;
+		int nbFormes;
+		do {
+			inputVar(nbFormes);
+		} while (nbFormes < 1);
 
+		return new Groupe(couleur, *inputGroupe(nbFormes, couleur));
 		break;
 	default:
-		f = new Triangle(1, 1, 1, 1);
+		return NULL;
 		break;
 	}
-
-	return f;
 }
 
 const std::vector<Vecteur2D>* Menu::inputPoints(int nbPoints) const {
@@ -85,7 +93,7 @@ const std::vector<Vecteur2D>* Menu::inputPoints(int nbPoints) const {
 
 	std::vector<Vecteur2D> * points = new std::vector<Vecteur2D>();
 	for (int i = 0; i < nbPoints; i++) {
-		std::cout << "Point numéro " << i << std::endl;
+		std::cout << "Point numéro " << i + 1 << std::endl;
 		std::cout << "Entrez X : " << std::endl;
 		inputVar(x);
 		std::cout << "Entrez Y : " << std::endl;
@@ -94,6 +102,21 @@ const std::vector<Vecteur2D>* Menu::inputPoints(int nbPoints) const {
 	}
 
 	return points;
+}
+
+const std::vector<FormeGeo*> * Menu::inputGroupe(const int nbFormes, const int couleur) const {
+	std::vector<FormeGeo*> * f = new std::vector<FormeGeo*>();
+	int choix;
+	for (int i = 0; i < nbFormes; i++) {
+		std::cout << "Sélectionnez la " << i + 1 << "ème forme à ajouter au groupe" << std::endl;
+		std::cout << Menu::CERCLE << ")\tCercle" << std::endl << Menu::SEGMENT << ")\tSegment" << std::endl << Menu::TRIANGLE << ")\tTriangle" << std::endl
+			<< Menu::POLYGONE << ")\tPolygone" << std::endl << Menu::GROUPE << ")\tGroupe" << std::endl;
+		do {
+			inputVar(choix);
+		} while (choix < 0 || choix > 5);
+		f->push_back(inputForme(choix, couleur));
+	}
+	return f;
 }
 
 const void Menu::sauvegarder() const {
