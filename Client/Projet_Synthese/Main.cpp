@@ -1,6 +1,8 @@
 #include "Menu.h"
 #include <fstream>
 #include <Windows.h> // Pour les accents dans la console sous Windows
+#include "ClientDessin.h"
+#include "Erreur.h"
 
 #pragma comment(lib, "Ws2_32.lib")
 
@@ -10,8 +12,14 @@ int main() {
 	// Remet à 0 le fichier de sauvegarde
 	std::ofstream output("formes.txt");
 
-	Menu menu;
-
+	//Menu menu;
+	try {
+		ClientDessin client("192.168.0.20", 10000);
+		client.dessinerForme("test");
+	}
+	catch (Erreur e) {
+		std::cerr << e.message << std::endl;
+	}
 	/*
 	FormeGeo *pt = new Triangle(FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
 	std::cout << *pt << std::endl;
@@ -47,5 +55,6 @@ int main() {
 
 	*/
 	output.close();
+	system("pause");
 	exit(0);
 }

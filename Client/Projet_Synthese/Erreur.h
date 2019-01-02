@@ -2,7 +2,6 @@
 /**
 classe Erreur
 */
-using namespace std;
 
 #include <string>
 #include <iostream>
@@ -15,7 +14,7 @@ public:
 	Erreur(const char * messageErreur);
 
 	virtual ~Erreur();
-	operator string() const;
+	operator std::string() const;
 };
 
-ostream & operator << (ostream & os, const Erreur & erreur);
+std::ostream & operator << (std::ostream & os, const Erreur & erreur);

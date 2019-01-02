@@ -3,7 +3,6 @@
 /**
 mise en oeuvre de la classe Erreur
 */
-using namespace std;
 
 #include <stdio.h>
 #include <string.h>
@@ -28,11 +27,11 @@ Erreur::Erreur(const char * messageErreur) {
 
 Erreur::~Erreur() {}
 
-Erreur::operator string() const {
-	return string(this->message);
+Erreur::operator std::string() const {
+	return std::string(this->message);
 }
 
-ostream & operator << (ostream & os, const Erreur & erreur) {
-	os << (string)erreur;
+std::ostream & operator << (std::ostream & os, const Erreur & erreur) {
+	os << (std::string)erreur;
 	return os;
 }

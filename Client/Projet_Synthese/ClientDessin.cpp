@@ -6,15 +6,10 @@
  */
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 
-#include <winsock2.h>
-#include <string.h>
-#include <string>
 #include <sstream>
 #include "Erreur.h"
 #include "MaWinsock.h"
 #include "ClientDessin.h"
-
-using namespace std;
 
 /**
  * crée un client TCP/IP vers un serveur de dessin
@@ -24,7 +19,7 @@ using namespace std;
  *
  * */
 
-ClientDessin::ClientDessin(const string & adresseServeurDessin, const int portServeurDessin) {
+ClientDessin::ClientDessin(const std::string & adresseServeurDessin, const int portServeurDessin) {
 	MaWinsock::getInstance();	// initialisation de la DLL : effectuée une seule fois
 
 	//---------------------- création socket -------------------------------------------------
@@ -39,12 +34,12 @@ ClientDessin::ClientDessin(const string & adresseServeurDessin, const int portSe
 	sock = socket(familleAdresses, typeSocket, protocole);
 
 	if (sock == INVALID_SOCKET) {
-		ostringstream oss;
-		oss << "la création du socket a échoué : code d'erreur = " << WSAGetLastError() << endl;	// pour les valeurs renvoyées par WSAGetLastError() : cf. doc réf winsock
+		std::ostringstream oss;
+		oss << "la création du socket a échoué : code d'erreur = " << WSAGetLastError() << std::endl;	// pour les valeurs renvoyées par WSAGetLastError() : cf. doc réf winsock
 		throw Erreur(oss.str().c_str());
 	}
 
-	cout << "socket de dessin créé" << endl;
+	std::cout << "socket de dessin créé" << std::endl;
 
 	//------------------------------ création du représentant du serveur ----------------------------------------
 
@@ -60,7 +55,7 @@ ClientDessin::ClientDessin(const string & adresseServeurDessin, const int portSe
 	if (r == SOCKET_ERROR)
 		throw Erreur("La connexion au serveur de dessin a échoué");
 
-	cout << "connexion au serveur de dessin réussie" << endl;
+	std::cout << "connexion au serveur de dessin réussie" << std::endl;
 }
 
 ClientDessin::~ClientDessin() {
@@ -73,14 +68,14 @@ ClientDessin::~ClientDessin() {
 	r = closesocket(sock);                          // renvoie une valeur non nulle en cas d'échec. Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
 	if (r) std::cerr << "La fermeture du socket a échoué";
 
-	cout << "arrêt normal du client" << endl;
+	std::cout << "arrêt normal du client" << std::endl;
 }
 
-void ClientDessin::dessinerForme(const string & req) {
-	int r = send(sock, req.c_str(), req.length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
+void ClientDessin::dessinerForme(const std::string & req) {
+	int r = send(sock, req.c_str(), (int)req.length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
 	if (r == SOCKET_ERROR)
 		throw Erreur("échec de l'envoi de la requête");
 
-	cout << "requête envoyée" << endl;
+	std::cout << "requête envoyée" << std::endl;
 }
