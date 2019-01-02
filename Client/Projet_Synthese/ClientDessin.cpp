@@ -76,7 +76,7 @@ ClientDessin::~ClientDessin() {
 	cout << "arrêt normal du client" << endl;
 }
 
-void ClientDessin::dessin(const string & req) {
+void ClientDessin::dessinerForme(const string & req) {
 	int r = send(sock, req.c_str(), req.length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
 	if (r == SOCKET_ERROR)

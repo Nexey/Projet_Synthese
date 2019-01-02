@@ -20,7 +20,5 @@ public:
 	ClientDessin(const string & adresseServeurDessin, const int portServeurDessin);
 	~ClientDessin();
 
-	void dessin(const string& req);
+	void dessinerForme(const string& req);
 };
-
-
