@@ -1,4 +1,2 @@
-[ID : Triangle_0, COULEUR : BLACK, NB_SOMMETS : 3, SOMMETS : (1, 1) (2, 2) (3, 3)]
-
-[ID : Triangle_1, COULEUR : RED, NB_SOMMETS : 3, SOMMETS : (1, 1) (0, 0) (8, 8)]
+[ID : Triangle_1, COULEUR : BLACK, NB_SOMMETS : 3, SOMMETS : (1, 1) (4, 1) (1, 4)]
 

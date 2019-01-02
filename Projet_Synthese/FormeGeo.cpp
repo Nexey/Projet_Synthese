@@ -33,6 +33,12 @@ const std::string FormeGeo::getInfos() const {
 	return oss.str();
 }
 
+FormeGeo::operator std::string() const {
+	std::stringstream ss;
+	ss << "[" << getInfos() << "]" << std::endl;
+	return ss.str();
+}
+
 const int FormeGeo::getCouleur() const {
 	return couleur;
 }
@@ -42,6 +48,6 @@ void FormeGeo::setCouleur(const int& c) {
 }
 
 std::ostream & operator<<(std::ostream &o, const FormeGeo &f) {
-	o << "[" << f.getInfos() << "]" << std::endl;
+	o << (std::string)f;
 	return o;
 }

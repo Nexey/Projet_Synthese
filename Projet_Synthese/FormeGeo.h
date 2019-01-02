@@ -31,6 +31,7 @@ public:
 	inline const std::string& getDesig() const;
 
 	virtual const std::string getInfos() const;
+	operator std::string() const;
 	virtual FormeGeo * clone() const = 0;
 
 	const int getCouleur() const;
