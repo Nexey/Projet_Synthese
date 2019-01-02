@@ -14,9 +14,7 @@ inline const std::string& FormeGeo::getDesig() const {
 
 const std::string FormeGeo::getInfos() const {
 	std::ostringstream oss;
-	oss << "Désignation : " << std::endl << desig << std::endl;
-	oss << "Couleur : " << std::endl << FormeGeo::tabCouleurs[couleur] << std::endl;
-	oss << "Nombre de sommets : " << std::endl << getNbSommet() << std::endl;
+	oss << "ID : " << desig << ", COULEUR : " << FormeGeo::tabCouleurs[couleur] << ", NB_SOMMETS : " << getNbSommet();
 	return oss.str();
 }
 
@@ -29,6 +27,6 @@ void FormeGeo::setCouleur(const int& c) {
 }
 
 std::ostream & operator<<(std::ostream &o, const FormeGeo &f) {
-	o << f.getInfos();
+	o << "[" << f.getInfos() << "]" << std::endl;
 	return o;
 }

@@ -15,7 +15,6 @@ public:
 	void addPoint(const Vecteur2D&);
 
 	FormeGeo* accepter(IVisiteur *v);
-	const std::string getInfos() const;
 	FormeGeo * clone() const;
 };
 

@@ -45,7 +45,6 @@ int main() {
 	delete pt;
 
 	*/
-	system("pause");
 	output.close();
 	exit(0);
 }

@@ -25,8 +25,7 @@ inline const double Cercle::getRayon() const {
 const std::string Cercle::getInfos() const {
 	std::ostringstream oss;
 	oss << Polygone::getInfos();
-	oss << "Rayon : " << std::endl << rayon << std::endl;
-	oss << "Fin" << std::endl;
+	oss << ", RAYON : " << rayon;
 	return oss.str();
 }
 

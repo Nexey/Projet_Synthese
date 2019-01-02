@@ -24,13 +24,6 @@ FormeGeo * Triangle::accepter(IVisiteur * v) {
 	return v->visite(this);
 }
 
-const std::string Triangle::getInfos() const {
-	std::ostringstream oss;
-	oss << Polygone::getInfos();
-	oss << "Fin" << std::endl;
-	return oss.str();
-}
-
 FormeGeo * Triangle::clone() const {
 	return new Triangle(*this);
 }
