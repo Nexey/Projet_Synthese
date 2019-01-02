@@ -85,6 +85,12 @@
     <Filter Include="Fichiers d%27en-tête\Géométrie\Maths">
       <UniqueIdentifier>{60405393-f877-4306-9711-da4acabe6bf0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Visiteur\Dessin">
+      <UniqueIdentifier>{b8c70ab3-f2b6-48b7-ab8c-cbcd55e82eff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteur\Dessin">
+      <UniqueIdentifier>{c97b9867-b5f9-4390-a8b3-3adb6255b954}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FormeGeo.cpp">
@@ -133,7 +139,10 @@
       <Filter>Fichiers sources\Client</Filter>
     </ClCompile>
     <ClCompile Include="ClientDessin.cpp">
-      <Filter>Fichiers d%27en-tête\Client</Filter>
+      <Filter>Fichiers sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurDessin.cpp">
+      <Filter>Fichiers sources\Visiteur\Dessin</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -180,7 +189,10 @@
       <Filter>Fichiers d%27en-tête\Client</Filter>
     </ClInclude>
     <ClInclude Include="ClientDessin.h">
-      <Filter>Fichiers sources\Client</Filter>
+      <Filter>Fichiers d%27en-tête\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurDessin.h">
+      <Filter>Fichiers d%27en-tête\Visiteur\Dessin</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
