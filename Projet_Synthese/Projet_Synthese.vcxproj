@@ -116,10 +116,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
+    <ClInclude Include="Erreur.h" />
     <ClInclude Include="FormeGeo.h" />
     <ClInclude Include="FormeGeoSimple.h" />
     <ClInclude Include="Groupe.h" />
     <ClInclude Include="IVisiteur.h" />
+    <ClInclude Include="MaWinsock.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Polygone.h" />
     <ClInclude Include="SauvegardeTexte.h" />
@@ -130,11 +132,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="Erreur.cpp" />
     <ClCompile Include="FormeGeo.cpp" />
     <ClCompile Include="FormeGeoSimple.cpp" />
     <ClCompile Include="Groupe.cpp" />
     <ClCompile Include="IVisiteur.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MaWinsock.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="SauvegardeTexte.cpp" />

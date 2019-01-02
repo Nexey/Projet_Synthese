@@ -13,12 +13,20 @@ const void Menu::show() {
 	int choix;
 	std::cout << "Sélectionnez la forme à dessiner" << std::endl;
 	std::cout << Menu::CERCLE << ")\tCercle" << std::endl << Menu::SEGMENT << ")\tSegment" << std::endl << Menu::TRIANGLE << ")\tTriangle" << std::endl
-		<< Menu::POLYGONE << ")\tPolygone" << std::endl << Menu::GROUPE << ")\tGroupe" << std::endl << "0)\tQuitter" << std::endl;
+		<< Menu::POLYGONE << ")\tPolygone" << std::endl << Menu::GROUPE << ")\tGroupe" << std::endl << "6) Dessiner les formes sauvegardées"
+		<< std::endl << "0)\tQuitter" << std::endl;
 	do {
 		inputVar(choix);
-	} while (choix < 0 || choix > 5);
+	} while (choix < 0 || choix > 6);
 	if (choix != 0) {
-		formes.push_back(inputForme(choix));
+		if (choix != 6) {
+			formes.push_back(inputForme(choix));
+			sauvegarder();
+		}
+		else {
+			//TDO : Appel à la méthode de dessin
+			
+		}
 		Menu::show();
 	}
 }

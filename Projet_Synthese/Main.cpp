@@ -1,7 +1,9 @@
 #include "Menu.h"
 #include <fstream>
-
 #include <Windows.h> // Pour les accents dans la console sous Windows
+
+#pragma comment(lib, "Ws2_32.lib")
+
 int main() {
 	SetConsoleOutputCP(1252); // Pour les accents dans la console sous Windows
 
@@ -9,7 +11,6 @@ int main() {
 	std::ofstream output("formes.txt");
 
 	Menu menu;
-	menu.sauvegarder();
 
 	/*
 	FormeGeo *pt = new Triangle(FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
