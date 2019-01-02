@@ -132,3 +132,11 @@ const void Menu::sauvegarder() const {
 	for (it; it < formes.end(); it++)
 		(*it)->accepter(visiSauvegarde);
 }
+
+Menu::operator std::string() const {
+	std::stringstream ss;
+	std::vector<FormeGeo*>::const_iterator it = formes.begin();
+	for (it; it < formes.end(); it++)
+		ss << **it << std::endl;
+	return ss.str();
+}

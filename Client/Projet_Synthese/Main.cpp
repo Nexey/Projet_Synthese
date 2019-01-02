@@ -12,10 +12,10 @@ int main() {
 	// Remet à 0 le fichier de sauvegarde
 	std::ofstream output("formes.txt");
 
-	//Menu menu;
+	Menu menu;
 	try {
 		ClientDessin client("192.168.0.20", 10000);
-		client.dessinerForme("test");
+		client.dessinerForme((std::string)menu);
 	}
 	catch (Erreur e) {
 		std::cerr << e.message << std::endl;
