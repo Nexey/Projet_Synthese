@@ -1,10 +1,25 @@
 #include "FormeGeo.h"
 
+int FormeGeo::nbFormeGeos = 0;
+
 const std::string FormeGeo::tabCouleurs[6] = { "BLACK", "BLUE", "RED", "GREEN", "YELLOW", "CYAN" };
 
-FormeGeo::FormeGeo(const std::string& d, const int& c) : desig(d), couleur(c) {}
+const std::string FormeGeo::generateDesig(const std::string &s) {
+	FormeGeo::nbFormeGeos++;
+	std::stringstream ss;
+	ss << s << "_" << FormeGeo::nbFormeGeos;
+	return ss.str();
+}
 
-FormeGeo::FormeGeo(const FormeGeo &f) : desig(f.getDesig()), couleur(f.getCouleur()) {}
+FormeGeo::FormeGeo(const std::string& d, const int& c) : couleur(c) {
+	desig = generateDesig(d);
+}
+
+FormeGeo::FormeGeo(const FormeGeo &f) : desig(f.getDesig()), couleur(f.getCouleur()) {
+	std::string temp = f.getDesig();
+	temp = temp.substr(0, temp.size() - 1);
+	desig = generateDesig(temp);
+}
 
 FormeGeo::~FormeGeo() {}
 

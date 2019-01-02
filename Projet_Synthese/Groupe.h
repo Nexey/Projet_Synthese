@@ -27,4 +27,3 @@ public:
 	FormeGeo* accepter(IVisiteur *v);
 	FormeGeo * clone() const;
 };
-

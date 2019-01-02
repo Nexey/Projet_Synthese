@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <iostream>
 #include <sstream>
@@ -5,12 +6,14 @@
 
 class IVisiteur;
 
-#pragma once
 class FormeGeo {
 	std::string desig;
 	int couleur;
 	FormeGeo() = delete;
 public:
+	static int nbFormeGeos;
+	const std::string generateDesig(const std::string&);
+
 	FormeGeo(const std::string& d, const int& c);
 	FormeGeo(const FormeGeo&);
 	virtual ~FormeGeo();

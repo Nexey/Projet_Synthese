@@ -9,7 +9,7 @@ Groupe::Groupe(const int & c, const std::vector<FormeGeo*> f) : FormeGeo("Groupe
 		addForme(**it);
 }
 
-Groupe::Groupe(const Groupe &g) : FormeGeo(g.getDesig(), g.getCouleur()) {
+Groupe::Groupe(const Groupe &g) : FormeGeo("Groupe", g.getCouleur()) {
 	std::vector<FormeGeo*>::const_iterator it = g.getVector().begin();
 	for (it; it < g.getVector().end(); it++)
 		*this = *this + **it;

@@ -1,14 +1,4 @@
-[ID : Groupe, COULEUR : RED, NB_SOMMETS : 8, NB_FORMES : 2, 
-FORME_1 : 
-[ID : Groupe, COULEUR : RED, NB_SOMMETS : 4, NB_FORMES : 2, 
-FORME_1 : 
-[ID : Triangle, COULEUR : RED, NB_SOMMETS : 3, SOMMETS : (1, 0) (2, 3) (5, 8)]
+[ID : Triangle_0, COULEUR : BLACK, NB_SOMMETS : 3, SOMMETS : (1, 1) (2, 2) (3, 3)]
 
-FORME_2 : 
-[ID : Cercle, COULEUR : RED, NB_SOMMETS : 1, SOMMETS : (1, 1), RAYON : 5]
-]
-
-FORME_2 : 
-[ID : Polygone, COULEUR : RED, NB_SOMMETS : 4, SOMMETS : (2, 2) (3, 3) (4, 4) (5, 5)]
-]
+[ID : Triangle_1, COULEUR : RED, NB_SOMMETS : 3, SOMMETS : (1, 1) (0, 0) (8, 8)]
 
