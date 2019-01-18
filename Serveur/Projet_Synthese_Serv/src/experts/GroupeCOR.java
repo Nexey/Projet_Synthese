@@ -15,9 +15,9 @@ public class GroupeCOR extends AbstractCOR {
 	}
 
 	@Override
-	public boolean construit(ArrayList<String> forme) {
+	protected void initForme(ArrayList<String> formeStr) {
 		// TODO Auto-generated method stub
-		return true;
+		
 	}
 
 }

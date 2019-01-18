@@ -1,1 +1,6 @@
-{	ID : Cercle; COULEUR : BLUE; NB_SOMMETS : 1; SOMMETS : (1, 1); RAYON : 1	}
+{	ID : Cercle; COULEUR : BLUE; NB_SOMMETS : 1; SOMMETS : (64, 64); RAYON : 64	}
+{	ID : Cercle; COULEUR : BLUE; NB_SOMMETS : 1; SOMMETS : (64, 64); RAYON : 64	}
+{	ID : Triangle; COULEUR : YELLOW; NB_SOMMETS : 3; SOMMETS : (30, 30) - (30, 100) - (100, 30)	}
+{	ID : Cercle; COULEUR : BLUE; NB_SOMMETS : 1; SOMMETS : (64, 64); RAYON : 64	}
+{	ID : Triangle; COULEUR : YELLOW; NB_SOMMETS : 3; SOMMETS : (30, 30) - (30, 100) - (100, 30)	}
+{	ID : Polygone; COULEUR : CYAN; NB_SOMMETS : 4; SOMMETS : (20, 20) - (20, 100) - (100, 100) - (100, 20)	}

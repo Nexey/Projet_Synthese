@@ -72,7 +72,7 @@ const std::string Polygone::getInfos() const {
 	for (it; it < points.end(); it++) {
 		oss << *it;
 		if (it + 1 != points.end())
-			oss << ", ";
+			oss << " - ";
 	}
 	return oss.str();
 }
