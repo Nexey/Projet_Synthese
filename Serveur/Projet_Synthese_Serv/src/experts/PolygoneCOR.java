@@ -1,5 +1,7 @@
 package experts;
 
+import java.util.ArrayList;
+
 public class PolygoneCOR extends AbstractCOR {
 	
 	public PolygoneCOR() {
@@ -17,7 +19,7 @@ public class PolygoneCOR extends AbstractCOR {
 	}
 
 	@Override
-	public boolean construit() {
+	public boolean construit(ArrayList<String> forme) {
 		// TODO Auto-generated method stub
 		return true;
 	}

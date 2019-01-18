@@ -1,0 +1,1 @@
+{	ID : Cercle; COULEUR : RED; NB_SOMMETS : 1; SOMMETS : (128, 128); RAYON : 60	}

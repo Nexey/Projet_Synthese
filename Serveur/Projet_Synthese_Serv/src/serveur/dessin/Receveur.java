@@ -58,10 +58,8 @@ public class Receveur extends Thread {
 		// System.out.println(formeFinale);
 		
 		// DEBUG
-		if (expert.generer(formeFinale.get(0))) System.out.println("La forme peut être générée");
+		if (expert.generer(formeFinale)) System.out.println("La forme peut être générée");
 		else System.out.println("Ntm");
-		
-		
 	}
 	
 	public void run() {
