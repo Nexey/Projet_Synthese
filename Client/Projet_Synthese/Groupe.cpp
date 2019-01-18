@@ -72,8 +72,8 @@ const std::string Groupe::getInfos() const {
 	std::vector<FormeGeo*>::const_iterator it = formes.begin();
 	int i = 1;
 	for (it; it < formes.end(); it++, i++) {
-		oss << "FORME" << " : " << "[" << (*it)->getInfos() << "]";
-		if (it != formes.end())
+		oss << "[" << (*it)->getInfos() << "]";
+		if (it + 1 != formes.end())
 			oss << getSeparateur();
 	}
 	return oss.str();

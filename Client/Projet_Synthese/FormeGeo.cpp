@@ -26,7 +26,7 @@ const std::string FormeGeo::getInfos() const {
 
 FormeGeo::operator std::string() const {
 	std::stringstream ss;
-	ss << "{\t" << getInfos() << "\t}";
+	ss << "{ " << getInfos() << " }";
 	return ss.str();
 }
 

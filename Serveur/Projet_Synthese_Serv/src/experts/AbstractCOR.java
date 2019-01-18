@@ -9,34 +9,38 @@ public abstract class AbstractCOR {
 	
 	protected int listeX[];
 	protected int listeY[];
-	protected ArrayList<String> formesConstruites;
+	protected ArrayList<String> formesConstruitesCOR;
+	protected ArrayList<Shape> formes;
 	protected CadreDessin cadre;
     public AbstractCOR next;
 	String titre, couleur;
 	int nbSommets;
-	Shape forme;
     
     protected final int X = 0, Y = 1;
-
-    public AbstractCOR(AbstractCOR next){
-		formesConstruites = new ArrayList<String>();
+    
+    private void initCOR() {
+		formesConstruitesCOR = new ArrayList<String>();
+		formes = new ArrayList<Shape>();
 		this.cadre = new CadreDessin();
-    	this.next = next;
     }
 
+    public AbstractCOR(AbstractCOR next) {
+    	initCOR();
+    	this.next = next;
+    }
+    
     public AbstractCOR() {
-		formesConstruites = new ArrayList<String>();
-		this.cadre = new CadreDessin();
+    	initCOR();
         this.next = null;
     }
 
     public boolean peutConstruire(String forme) {
-		return formesConstruites.contains(forme);
+		return formesConstruitesCOR.contains(forme);
     }
     
-    protected abstract void initForme(ArrayList<String> formeStr);
+    protected abstract void initFormes(ArrayList<ArrayList<String>> listeFormes);
     
-    public boolean construit(ArrayList<String> formeStr) {
+    public abstract boolean construit(ArrayList<ArrayList<String>> listeFormes); /*{
 		String tmp = formeStr.get(0);
 		// Première lettre du titre en majuscule
 		titre = tmp.substring(0, 1).toUpperCase() + tmp.substring(1);
@@ -45,31 +49,20 @@ public abstract class AbstractCOR {
 		this.listeX = new int[nbSommets];
 		this.listeY = new int[nbSommets];
 		
-		// On enlève tous les espaces inutiles
-		String ligneCoords = formeStr.get(3).trim();
-		String listeCoords[] = ligneCoords.split("-");
-		String coordStr[];
-		
-		for (int i = 0; i < nbSommets; i++) {
-			coordStr = listeCoords[i].replaceAll("[()]", "").split(",");
-			this.listeX[i] = (Integer.parseInt(coordStr[this.X]));
-			this.listeY[i] = (Integer.parseInt(coordStr[this.Y]));
-		}
-		
-		initForme(formeStr);
+		initFormes(formeStr);
 
-		this.cadre.dessiner(forme, titre, couleur);
+		this.cadre.dessiner(formes, titre, couleur);
 		return true;
-    }
+    }*/
     
-    public boolean generer(ArrayList<String> forme){
-        if(peutConstruire(forme.get(0)))
-            return construit(forme);
+    public boolean generer(ArrayList<ArrayList<String>> listeFormes){
+        if(peutConstruire(listeFormes.get(0).get(0)))
+            return construit(listeFormes);
 
         if(next == null)
             return false;
 
-        return next.generer(forme);
+        return next.generer(listeFormes);
     }
 
 }

@@ -26,11 +26,11 @@ ClientDessin::ClientDessin(const std::string & adresseServeurDessin, const int p
 
 	if (sock == INVALID_SOCKET) {
 		std::ostringstream oss;
-		oss << "la création du socket a échoué : code d'erreur = " << WSAGetLastError() << std::endl;	// pour les valeurs renvoyées par WSAGetLastError() : cf. doc réf winsock
+		oss << "La création du socket a échoué : code d'erreur = " << WSAGetLastError() << std::endl;	// pour les valeurs renvoyées par WSAGetLastError() : cf. doc réf winsock
 		throw Erreur(oss.str().c_str());
 	}
 
-	std::cout << "socket de dessin créé" << std::endl;
+	std::cout << "Socket de dessin créé" << std::endl;
 
 	//------------------------------ création du représentant du serveur ----------------------------------------
 
@@ -46,7 +46,7 @@ ClientDessin::ClientDessin(const std::string & adresseServeurDessin, const int p
 	if (r == SOCKET_ERROR)
 		throw Erreur("La connexion au serveur de dessin a échoué");
 
-	std::cout << "connexion au serveur de dessin réussie" << std::endl;
+	std::cout << "Connexion au serveur de dessin réussie" << std::endl;
 }
 
 ClientDessin::~ClientDessin() {
@@ -54,19 +54,19 @@ ClientDessin::~ClientDessin() {
 														// renvoie une valeur non nulle en cas d'échec. Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
 
 	if (r == SOCKET_ERROR)
-		std::cerr << "la coupure de connexion a échoué";
+		std::cerr << "La coupure de connexion a échoué";
 
 	r = closesocket(sock);                          // renvoie une valeur non nulle en cas d'échec. Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
 	if (r) std::cerr << "La fermeture du socket a échoué";
 
-	std::cout << "arrêt normal du client" << std::endl;
+	std::cout << "Arrêt normal du client" << std::endl;
 }
 
 void ClientDessin::dessinerForme(const std::string & req) const {
 	int r = send(sock, req.c_str(), (int)req.length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
 	if (r == SOCKET_ERROR)
-		throw Erreur("échec de l'envoi de la requête");
+		throw Erreur("Échec de l'envoi de la requête");
 
-	std::cout << "requête envoyée" << std::endl;
+	std::cout << "Requête envoyée au serveur de dessin" << std::endl;
 }

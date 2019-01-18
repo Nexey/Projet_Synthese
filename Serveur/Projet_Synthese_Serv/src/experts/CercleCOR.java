@@ -7,43 +7,60 @@ public class CercleCOR extends AbstractCOR {
 	
 	public CercleCOR() {
 		super();
-		formesConstruites.add("cercle");
+		formesConstruitesCOR.add("cercle");
 	}
 	
 	public CercleCOR(AbstractCOR next) {
 		super(next);
-		formesConstruites.add("cercle");
+		formesConstruitesCOR.add("cercle");
 	}
 
 	@Override
-	protected void initForme(ArrayList<String> formeStr) {
-		double rayon = Double.parseDouble(formeStr.get(4));
-
-		forme = new Ellipse2D.Double(listeX[0], listeY[0], rayon*2, rayon*2);
+	protected void initFormes(ArrayList<ArrayList<String>> listeFormes) {
+		// TODO Auto-generated method stub
+		
 	}
+
+	@Override
+	public boolean construit(ArrayList<ArrayList<String>> listeFormes) {
+		// On récupère notre cercle
+		ArrayList<String> formeStr = listeFormes.get(0);
+		
+		String tmp = formeStr.get(0);
+		// Première lettre du titre en majuscule
+		titre = tmp.substring(0, 1).toUpperCase() + tmp.substring(1);
+		couleur = formeStr.get(1);
+		nbSommets = Integer.parseInt(formeStr.get(2));
+		this.listeX = new int[nbSommets];
+		this.listeY = new int[nbSommets];
+
+		String coordStr[] = formeStr.get(3).trim().replaceAll("[()]", "").split(",");
+		this.listeX[0] = (Integer.parseInt(coordStr[this.X]));
+		this.listeY[0] = (Integer.parseInt(coordStr[this.Y]));
+		
+		double rayon = Double.parseDouble(formeStr.get(4));
+		formes.add(new Ellipse2D.Double(listeX[0], listeY[0], rayon*2, rayon*2));
+
+		this.cadre.dessiner(formes, titre, couleur);
+		return true;
+	}
+
 	
 	/*
 	@Override
-	public boolean construit(ArrayList<String> forme) {
-		super.construit(forme);
-		/*
-		String titre, couleur;
-		double x, y, rayon;
+	protected void initFormes(ArrayList<String> formeStr) {
+		// On enlève tous les espaces inutiles
+		//String ligneCoords = formeStr.get(3).trim();
+		//String listeCoords[] = ligneCoords.split("-");
+		String coordStr[];
 		
-		String tmp = forme.get(0);
-		// Première lettre du titre en majuscule
-		titre = tmp.substring(0, 1).toUpperCase() + tmp.substring(1);
-		couleur = forme.get(1);
-		// forme.get(2) est le nombre de sommets, on s'en fiche ici
+		//coordStr = listeCoords[0].replaceAll("[()]", "").split(",");
+		coordStr = formeStr.get(3).trim().replaceAll("[()]", "").split(",");
+		this.listeX[0] = (Integer.parseInt(coordStr[this.X]));
+		this.listeY[0] = (Integer.parseInt(coordStr[this.Y]));
 		
-		String coords[] = forme.get(3).replaceAll("[()]", "").split(",");
-		*/
-		/*double rayon = Double.parseDouble(forme.get(4));
-
-		Shape cercle = new Ellipse2D.Double(listeX[0], listeY[0], rayon*2, rayon*2);
-		
-		this.cadre.dessiner(cercle, titre, couleur);
-		return true;
-	}*/
-	
+		double rayon = Double.parseDouble(formeStr.get(4));
+		formes.add(new Ellipse2D.Double(listeX[0], listeY[0], rayon*2, rayon*2));
+	}
+	*/
 }

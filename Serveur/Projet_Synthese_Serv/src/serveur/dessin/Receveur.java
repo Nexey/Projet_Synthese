@@ -32,32 +32,38 @@ public class Receveur extends Thread {
 		// Opérations sur la requête :
 		
 		// On dégage toutes les accolades et tous les espaces
-		String tmp = requete.replaceAll("[{}\t ]", "");
+		String tmp = requete.replaceAll("[{}\\[\\] \t]", "");
+		tmp = tmp.trim();
 		
 		// On stocke à des cellules différentes les différentes données
 		String categories[] = tmp.split(";");
 		
 		// Les sous catégories sont du style : "ID : CERCLE"
 		String sousCategories[];
+
+		// L'arraylist suivant contiendra une seule forme
+		ArrayList<String> forme = new ArrayList<String>();
 		
-		// L'arraylist suivant contiendra la forme finale, duh
-		ArrayList<String> formeFinale = new ArrayList<String>();
+		// L'arraylist suivant contiendra les forme finales, duh
+		ArrayList<ArrayList<String>> listeFormes = new ArrayList<ArrayList<String>>();
 		
-		for(String var : categories) {
-			// Opération sur la variable : je mets tout en minuscule
-			var = var.toLowerCase();
+		String sousCategStr;
+		for (int i = 0; i < categories.length; i++) {
+			sousCategStr = categories[i].toLowerCase();
+			sousCategories = sousCategStr.split(":");
 			
-			// Je récupère les deux différentes catégories dans le tableau de sous-catégories
-			sousCategories = var.split(":");
+			if (sousCategories[0].equals("id"))
+				if (forme.size() > 0) {
+					listeFormes.add(new ArrayList<String>(forme));
+					forme.clear();
+				}
 			
-			// Je récupère seulement la deuxième partie, celle qui m'intéresse
-			formeFinale.add(sousCategories[1]);
+			forme.add(sousCategories[1]);
 		}
+		listeFormes.add(new ArrayList<String>(forme));
+		forme.clear();
 		
-		// DEBUG
-		// System.out.println(formeFinale);
-		
-		if (expert.generer(formeFinale)) System.out.println("La forme peut être générée");
+		if (expert.generer(listeFormes)) System.out.println("La forme peut être générée");
 		else System.out.println("La forme n'a pas pu être générée");
 	}
 	

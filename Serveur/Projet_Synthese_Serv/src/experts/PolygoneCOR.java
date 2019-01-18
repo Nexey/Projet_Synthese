@@ -7,40 +7,39 @@ public class PolygoneCOR extends AbstractCOR {
 	
 	public PolygoneCOR() {
 		super();
-		formesConstruites.add("segment");
-		formesConstruites.add("triangle");
-		formesConstruites.add("polygone");
+		formesConstruitesCOR.add("segment");
+		formesConstruitesCOR.add("triangle");
+		formesConstruitesCOR.add("polygone");
 	}
 	
 	public PolygoneCOR(AbstractCOR next) {
 		super(next);
-		formesConstruites.add("segment");
-		formesConstruites.add("triangle");
-		formesConstruites.add("polygone");
+		formesConstruitesCOR.add("segment");
+		formesConstruitesCOR.add("triangle");
+		formesConstruitesCOR.add("polygone");
 	}
 
 	@Override
-	protected void initForme(ArrayList<String> formeStr) {
-		forme = new Polygon(this.listeX, this.listeY, nbSommets);
+	protected void initFormes(ArrayList<ArrayList<String>> listeFormes) {
+		// TODO Auto-generated method stub
+		
 	}
 	
-	/*
 	@Override
-	public boolean construit(ArrayList<String> forme) {
-		/*
-		String titre, couleur;
-		int nbSommets;
+	public boolean construit(ArrayList<ArrayList<String>> listeFormes) {
+		// On récupère notre polygone
+		ArrayList<String> formeStr = listeFormes.get(0);
 		
-		String tmp = forme.get(0);
+		String tmp = formeStr.get(0);
 		// Première lettre du titre en majuscule
 		titre = tmp.substring(0, 1).toUpperCase() + tmp.substring(1);
-		couleur = forme.get(1);
-		nbSommets = Integer.parseInt(forme.get(2));
+		couleur = formeStr.get(1);
+		nbSommets = Integer.parseInt(formeStr.get(2));
 		this.listeX = new int[nbSommets];
 		this.listeY = new int[nbSommets];
-		
+
 		// On enlève tous les espaces inutiles
-		String ligneCoords = forme.get(3).trim();
+		String ligneCoords = formeStr.get(3).trim();
 		String listeCoords[] = ligneCoords.split("-");
 		String coordStr[];
 		
@@ -49,11 +48,27 @@ public class PolygoneCOR extends AbstractCOR {
 			this.listeX[i] = (Integer.parseInt(coordStr[this.X]));
 			this.listeY[i] = (Integer.parseInt(coordStr[this.Y]));
 		}
-		*//*
-		Shape polygon = new Polygon(this.listeX, this.listeY, nbSommets);
 		
-		this.cadre.dessiner(polygon, titre, couleur);
-		return true;
-	}*/
+		formes.add(new Polygon(this.listeX, this.listeY, nbSommets));
 
+		this.cadre.dessiner(formes, titre, couleur);
+		return true;
+	}
+
+	/*
+	@Override
+	protected void initFormes(ArrayList<String> formeStr) {
+		// On enlève tous les espaces inutiles
+		String ligneCoords = formeStr.get(3).trim();
+		String listeCoords[] = ligneCoords.split("-");
+		String coordStr[];
+		
+		for (int i = 0; i < nbSommets; i++) {
+			coordStr = listeCoords[i].replaceAll("[()]", "").split(",");
+			this.listeX[i] = (Integer.parseInt(coordStr[this.X]));
+			this.listeY[i] = (Integer.parseInt(coordStr[this.Y]));
+		}
+		
+		formes.add(new Polygon(this.listeX, this.listeY, nbSommets));
+	}*/
 }
