@@ -8,6 +8,7 @@ import serveur.dessin.Connexion;
 public class Serveur {
 	
 	static void testPorts() {
+		// Méthode permettant de sniffer tous les ports et dire ceux qui sont occupés
 		for(int port = 1; port <= 65535; port++){
 			try {
 				ServerSocket sSocket = new ServerSocket(port);
@@ -19,7 +20,7 @@ public class Serveur {
 	}
 
 	public static void main(String[] args) {
-		//testPorts();
         Connexion c = new Connexion();
+        c.run();
 	}
 }

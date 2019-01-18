@@ -1,7 +1,7 @@
 #include "VisiteurDessin.h"
 
 VisiteurDessin::VisiteurDessin() {
-	client = new ClientDessin("192.168.0.20", 10000);
+	client = new ClientDessin("127.0.0.16", 10000);
 }
 
 VisiteurDessin::~VisiteurDessin() {}

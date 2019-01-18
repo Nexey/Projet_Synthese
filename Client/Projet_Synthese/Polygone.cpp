@@ -67,12 +67,12 @@ void Polygone::rotation(const Vecteur2D & c, const double & a) {
 const std::string Polygone::getInfos() const {
 	std::ostringstream oss;
 	oss << FormeGeo::getInfos();
-	oss << ", SOMMETS : ";
+	oss << getSeparateur() << "SOMMETS : ";
 	std::vector<Vecteur2D>::const_iterator it = points.begin();
 	for (it; it < points.end(); it++) {
 		oss << *it;
 		if (it + 1 != points.end())
-			oss << " ";
+			oss << ", ";
 	}
 	return oss.str();
 }

@@ -68,11 +68,14 @@ const int Groupe::getNbSommet() const {
 const std::string Groupe::getInfos() const {
 	std::ostringstream oss;
 	oss << FormeGeo::getInfos();
-	oss << ", NB_FORMES : " << formes.size() << ", ";
+	oss << getSeparateur() << "NB_FORMES : " << formes.size() << getSeparateur();
 	std::vector<FormeGeo*>::const_iterator it = formes.begin();
 	int i = 1;
-	for (it; it < formes.end(); it++, i++)
-		oss << std::endl << "FORME_" << i << " : " << std::endl << **it;
+	for (it; it < formes.end(); it++, i++) {
+		oss << "FORME" << " : " << "[" << (*it)->getInfos() << "]";
+		if (it != formes.end())
+			oss << getSeparateur();
+	}
 	return oss.str();
 }
 

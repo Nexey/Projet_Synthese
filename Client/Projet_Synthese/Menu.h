@@ -34,6 +34,7 @@ public:
 	const std::vector<FormeGeo*>* inputGroupe(const int nbFormes, const int couleur) const;
 
 	const void sauvegarder() const;
+	const void dessiner();
 
 	operator std::string() const;
 };

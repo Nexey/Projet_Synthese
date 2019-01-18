@@ -8,13 +8,13 @@ class IVisiteur;
 
 class FormeGeo {
 	std::string desig;
+	std::string separateur;
 	int couleur;
 	FormeGeo() = delete;
 public:
 	static int nbFormeGeos;
-	const std::string generateDesig(const std::string&);
 
-	FormeGeo(const std::string& d, const int& c);
+	FormeGeo(const std::string& d, const int& c, const std::string & separateur = "; ");
 	FormeGeo(const FormeGeo&);
 	virtual ~FormeGeo();
 
@@ -29,6 +29,7 @@ public:
 	static const std::string tabCouleurs[6];
 
 	inline const std::string& getDesig() const;
+	inline const std::string & getSeparateur() const;
 
 	virtual const std::string getInfos() const;
 	operator std::string() const;

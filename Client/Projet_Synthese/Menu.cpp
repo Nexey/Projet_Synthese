@@ -12,30 +12,27 @@ Menu::~Menu() {
 
 const void Menu::show() {
 	int choix;
-	std::cout << "Sélectionnez la forme à dessiner" << std::endl;
+	std::cout << "Sélectionnez la forme à créer" << std::endl;
 	std::cout << Menu::CERCLE << ")\tCercle" << std::endl << Menu::SEGMENT << ")\tSegment" << std::endl << Menu::TRIANGLE << ")\tTriangle" << std::endl
 		<< Menu::POLYGONE << ")\tPolygone" << std::endl << Menu::GROUPE << ")\tGroupe" << std::endl << "6)\tDessiner les formes sauvegardées"
 		<< std::endl << "0)\tQuitter" << std::endl;
 	do {
 		inputVar(choix);
 	} while (choix < 0 || choix > 6);
-	if (choix != 0) {
-		if (choix != 6) {
-			formes.push_back(inputForme(choix));
-			sauvegarder();
-		}
-		else {
-			//TDO : Appel à la méthode de dessin
-			std::vector<FormeGeo*>::const_iterator it = formes.begin();
-			for (it; it < formes.end(); it++)
-				try {
-					(*it)->accepter(visiDessin);
-			} catch (Erreur e) {
-				std::cerr << e.message << std::endl;
-			}
-		}
-		Menu::show();
+
+	switch (choix) {
+	case 0:
+		break;
+	case 6:
+		Menu::dessiner();
+		break;
+	default:
+		formes.push_back(inputForme(choix));
+		sauvegarder();
+		break;
 	}
+
+	if (choix != 0) show();
 }
 
 template<class T>
@@ -138,6 +135,26 @@ const void Menu::sauvegarder() const {
 	std::vector<FormeGeo*>::const_iterator it = formes.begin();
 	for (it; it < formes.end(); it++)
 		(*it)->accepter(visiSauvegarde);
+}
+
+const void Menu::dessiner() {
+	if (formes.size() != 0) {
+		int i = 1;
+		int choix;
+		std::cout << "Sélectionnez la forme à dessiner" << std::endl;
+		std::vector<FormeGeo*>::const_iterator it = formes.begin();
+		for (it, i; it < formes.end(); i++, it++)
+			std::cout << i << ") " << **it << std::endl;
+		do {
+			inputVar(choix);
+		} while (choix < 1 || choix > formes.size());
+		try {
+			(formes.at(choix - 1))->accepter(visiDessin);
+		}
+		catch (Erreur e) {
+			std::cerr << e.message << std::endl;
+		}
+	}
 }
 
 Menu::operator std::string() const {

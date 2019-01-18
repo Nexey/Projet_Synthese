@@ -48,6 +48,6 @@ int main() {
 
 	*/
 	output.close();
-	system("pause");
+	//system("pause");
 	exit(0);
 }
