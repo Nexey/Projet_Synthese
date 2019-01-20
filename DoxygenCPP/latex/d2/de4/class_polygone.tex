@@ -1,0 +1,69 @@
+\hypertarget{class_polygone}{}\section{Polygone Class Reference}
+\label{class_polygone}\index{Polygone@{Polygone}}
+Inheritance diagram for Polygone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{d2/de4/class_polygone}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_polygone_a1510ddc356cdbb799782e22bc487a59e}\label{class_polygone_a1510ddc356cdbb799782e22bc487a59e}} 
+{\bfseries Polygone} (const int \&c)
+\item 
+\mbox{\Hypertarget{class_polygone_aaf1c50570515d23aa1a32036b1000130}\label{class_polygone_aaf1c50570515d23aa1a32036b1000130}} 
+{\bfseries Polygone} (const int \&c, const std\+::vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$)
+\item 
+\mbox{\Hypertarget{class_polygone_abdf1d57af7096ffd7adc2477798d821d}\label{class_polygone_abdf1d57af7096ffd7adc2477798d821d}} 
+{\bfseries Polygone} (const std\+::string \&n, const int \&c)
+\item 
+\mbox{\Hypertarget{class_polygone_ad50701c17d6c259eb88c69355e6d4040}\label{class_polygone_ad50701c17d6c259eb88c69355e6d4040}} 
+{\bfseries Polygone} (const \mbox{\hyperlink{class_polygone}{Polygone}} \&)
+\item 
+\mbox{\Hypertarget{class_polygone_ad0de0795df9b5407cde393ce4aaa95eb}\label{class_polygone_ad0de0795df9b5407cde393ce4aaa95eb}} 
+virtual void {\bfseries add\+Point} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&)
+\item 
+\mbox{\Hypertarget{class_polygone_a333f32a9482260ae403eb60502e558bd}\label{class_polygone_a333f32a9482260ae403eb60502e558bd}} 
+\mbox{\hyperlink{class_polygone}{Polygone}} \& {\bfseries operator+} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&)
+\item 
+\mbox{\Hypertarget{class_polygone_a389bb7380a87ab5ed95d08d4ae272d24}\label{class_polygone_a389bb7380a87ab5ed95d08d4ae272d24}} 
+\mbox{\hyperlink{class_polygone}{Polygone}} \& {\bfseries operator+=} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&)
+\item 
+\mbox{\Hypertarget{class_polygone_a928bdd7cd9dd5ab7c9c96a0e27f448d0}\label{class_polygone_a928bdd7cd9dd5ab7c9c96a0e27f448d0}} 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const int)
+\item 
+\mbox{\Hypertarget{class_polygone_a0fd3a383b6749505feaa96060eac767d}\label{class_polygone_a0fd3a383b6749505feaa96060eac767d}} 
+const std\+::vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ \& {\bfseries get\+Vector} () const
+\item 
+\mbox{\Hypertarget{class_polygone_aa3e2570d82f72447dae730a9504f0c89}\label{class_polygone_aa3e2570d82f72447dae730a9504f0c89}} 
+const int {\bfseries get\+Nb\+Sommet} () const
+\item 
+\mbox{\Hypertarget{class_polygone_a6cdf232cb935415d1d8b0e0983ec4f31}\label{class_polygone_a6cdf232cb935415d1d8b0e0983ec4f31}} 
+void {\bfseries translation} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&)
+\item 
+\mbox{\Hypertarget{class_polygone_a99a5c6f6249b0b21e61d1cf4ba6c28db}\label{class_polygone_a99a5c6f6249b0b21e61d1cf4ba6c28db}} 
+void {\bfseries zoom} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&o, const double \&k)
+\item 
+\mbox{\Hypertarget{class_polygone_a348cebf6880677bc648c9743567b424c}\label{class_polygone_a348cebf6880677bc648c9743567b424c}} 
+void {\bfseries rotation} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&c, const double \&a)
+\item 
+\mbox{\Hypertarget{class_polygone_a6c7fbc4f5c8472c238ffddf33b21d5e6}\label{class_polygone_a6c7fbc4f5c8472c238ffddf33b21d5e6}} 
+virtual const double {\bfseries aire} () const
+\item 
+\mbox{\Hypertarget{class_polygone_af94b09b993d84fc451b772b8ead28144}\label{class_polygone_af94b09b993d84fc451b772b8ead28144}} 
+virtual const std\+::string {\bfseries get\+Infos} () const
+\item 
+\mbox{\Hypertarget{class_polygone_a06a8b2d22059efe02ff62af2cf8c5a49}\label{class_polygone_a06a8b2d22059efe02ff62af2cf8c5a49}} 
+\mbox{\hyperlink{class_forme_geo}{Forme\+Geo}} $\ast$ {\bfseries accepter} (\mbox{\hyperlink{class_i_visiteur}{I\+Visiteur}} $\ast$v)
+\item 
+\mbox{\Hypertarget{class_polygone_a2cba3f4c141d1dc12dace56efa47b9ba}\label{class_polygone_a2cba3f4c141d1dc12dace56efa47b9ba}} 
+\mbox{\hyperlink{class_forme_geo}{Forme\+Geo}} $\ast$ {\bfseries clone} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Polygone.\+h\item 
+Polygone.\+cpp\end{DoxyCompactItemize}

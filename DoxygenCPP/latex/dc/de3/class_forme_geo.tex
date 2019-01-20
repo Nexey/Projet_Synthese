@@ -1,0 +1,92 @@
+\hypertarget{class_forme_geo}{}\section{Forme\+Geo Class Reference}
+\label{class_forme_geo}\index{FormeGeo@{FormeGeo}}
+Inheritance diagram for Forme\+Geo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{dc/de3/class_forme_geo}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_forme_geo_ab96bd7655720eac2f08614dfdaae8600}\label{class_forme_geo_ab96bd7655720eac2f08614dfdaae8600}} 
+{\bfseries Forme\+Geo} (const std\+::string \&d, const int \&c, const std\+::string \&separateur=\char`\"{}; \char`\"{})
+\item 
+\mbox{\Hypertarget{class_forme_geo_ac8d849548fd15a811f4e5ae176d4ca77}\label{class_forme_geo_ac8d849548fd15a811f4e5ae176d4ca77}} 
+{\bfseries Forme\+Geo} (const \mbox{\hyperlink{class_forme_geo}{Forme\+Geo}} \&)
+\item 
+\mbox{\Hypertarget{class_forme_geo_a9c8a37a9520a9b1d75435c7a5963b9ec}\label{class_forme_geo_a9c8a37a9520a9b1d75435c7a5963b9ec}} 
+const std\+::string \& {\bfseries get\+Desig} () const
+\item 
+\mbox{\Hypertarget{class_forme_geo_a1b9076767bc46ec11cd2cb68425bf851}\label{class_forme_geo_a1b9076767bc46ec11cd2cb68425bf851}} 
+const std\+::string \& {\bfseries get\+Separateur} () const
+\item 
+\mbox{\Hypertarget{class_forme_geo_a8aed0b2af9e373ce60b60c6c183fe440}\label{class_forme_geo_a8aed0b2af9e373ce60b60c6c183fe440}} 
+virtual const std\+::string {\bfseries get\+Infos} () const
+\item 
+\mbox{\Hypertarget{class_forme_geo_a325fb628f5ea01a1e42a0415f9862fad}\label{class_forme_geo_a325fb628f5ea01a1e42a0415f9862fad}} 
+{\bfseries operator std\+::string} () const
+\item 
+\mbox{\Hypertarget{class_forme_geo_a985200a977e1c662f831d6889fa96d32}\label{class_forme_geo_a985200a977e1c662f831d6889fa96d32}} 
+virtual \mbox{\hyperlink{class_forme_geo}{Forme\+Geo}} $\ast$ {\bfseries clone} () const =0
+\item 
+\mbox{\Hypertarget{class_forme_geo_a297e7b920aecc59a5927852b5813441a}\label{class_forme_geo_a297e7b920aecc59a5927852b5813441a}} 
+const int {\bfseries get\+Couleur} () const
+\item 
+\mbox{\Hypertarget{class_forme_geo_a13a99d54d251d2d21d45890232f96db8}\label{class_forme_geo_a13a99d54d251d2d21d45890232f96db8}} 
+void {\bfseries set\+Couleur} (const int \&)
+\item 
+\mbox{\Hypertarget{class_forme_geo_a77aeb29aba4ea87b70fa2d7970f62291}\label{class_forme_geo_a77aeb29aba4ea87b70fa2d7970f62291}} 
+virtual void {\bfseries translation} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)=0
+\item 
+\mbox{\Hypertarget{class_forme_geo_afaf71a1cf913e8340ea82a73703eb2f1}\label{class_forme_geo_afaf71a1cf913e8340ea82a73703eb2f1}} 
+virtual void {\bfseries zoom} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&o, const double \&k)=0
+\item 
+\mbox{\Hypertarget{class_forme_geo_a05fd8593e4f790c284fdd23bccde5807}\label{class_forme_geo_a05fd8593e4f790c284fdd23bccde5807}} 
+virtual void {\bfseries rotation} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&o, const double \&a)=0
+\item 
+\mbox{\Hypertarget{class_forme_geo_a63b4a96f623f0d2b4d1a4541a6e6b3d3}\label{class_forme_geo_a63b4a96f623f0d2b4d1a4541a6e6b3d3}} 
+virtual const int {\bfseries get\+Nb\+Sommet} () const =0
+\item 
+\mbox{\Hypertarget{class_forme_geo_a9c75bbaa20dffd63aefe1c8de00a9d85}\label{class_forme_geo_a9c75bbaa20dffd63aefe1c8de00a9d85}} 
+virtual \mbox{\hyperlink{class_forme_geo}{Forme\+Geo}} $\ast$ {\bfseries accepter} (\mbox{\hyperlink{class_i_visiteur}{I\+Visiteur}} $\ast$v)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_forme_geo_a7def7d58284e2bcebd42da550aabed61}\label{class_forme_geo_a7def7d58284e2bcebd42da550aabed61}} 
+static int {\bfseries nb\+Forme\+Geos} = 0
+\item 
+\mbox{\Hypertarget{class_forme_geo_aaa9f666214acae24187d728f9b360604}\label{class_forme_geo_aaa9f666214acae24187d728f9b360604}} 
+static const int {\bfseries B\+L\+A\+CK} = 0
+\item 
+\mbox{\Hypertarget{class_forme_geo_a683d564c4ed1425a75efab32702c87db}\label{class_forme_geo_a683d564c4ed1425a75efab32702c87db}} 
+static const int {\bfseries B\+L\+UE} = 1
+\item 
+\mbox{\Hypertarget{class_forme_geo_aa62b26e133ed4bb5d5ff06a453b616d8}\label{class_forme_geo_aa62b26e133ed4bb5d5ff06a453b616d8}} 
+static const int {\bfseries R\+ED} = 2
+\item 
+\mbox{\Hypertarget{class_forme_geo_af58c1c56fa63e46d4fb5860deb186c14}\label{class_forme_geo_af58c1c56fa63e46d4fb5860deb186c14}} 
+static const int {\bfseries G\+R\+E\+EN} = 3
+\item 
+\mbox{\Hypertarget{class_forme_geo_a910e643ce2be5fd38d7f707b3a86f538}\label{class_forme_geo_a910e643ce2be5fd38d7f707b3a86f538}} 
+static const int {\bfseries Y\+E\+L\+L\+OW} = 4
+\item 
+\mbox{\Hypertarget{class_forme_geo_a81475741848a25a3b05a87e067f68ea4}\label{class_forme_geo_a81475741848a25a3b05a87e067f68ea4}} 
+static const int {\bfseries C\+Y\+AN} = 5
+\item 
+\mbox{\Hypertarget{class_forme_geo_ac1c0a5f742f033116f4133703dcc23c8}\label{class_forme_geo_ac1c0a5f742f033116f4133703dcc23c8}} 
+static const std\+::string {\bfseries tab\+Couleurs} \mbox{[}6\mbox{]} = \{ \char`\"{}B\+L\+A\+CK\char`\"{}, \char`\"{}B\+L\+UE\char`\"{}, \char`\"{}R\+ED\char`\"{}, \char`\"{}G\+R\+E\+EN\char`\"{}, \char`\"{}Y\+E\+L\+L\+OW\char`\"{}, \char`\"{}C\+Y\+AN\char`\"{} \}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_forme_geo_a8a4eaf9eb2894e1a3c342e428170818b}\label{class_forme_geo_a8a4eaf9eb2894e1a3c342e428170818b}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_forme_geo}{Forme\+Geo}} \&)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Forme\+Geo.\+h\item 
+Forme\+Geo.\+cpp\end{DoxyCompactItemize}

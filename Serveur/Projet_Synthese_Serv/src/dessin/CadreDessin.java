@@ -32,6 +32,13 @@ public class CadreDessin extends Canvas {
 	public CadreDessin(GraphicsConfiguration config) {
 		super(config);
 		this.setPreferredSize(new Dimension(512, 512));
+        tabCouleurs = new HashMap<String, Color>();
+        tabCouleurs.put("black", Color.BLACK);
+        tabCouleurs.put("blue", Color.BLUE);
+        tabCouleurs.put("red", Color.RED);
+        tabCouleurs.put("green", Color.GREEN);
+        tabCouleurs.put("yellow", Color.YELLOW);
+        tabCouleurs.put("cyan", Color.CYAN);
 	}
 	
 	public void dessiner(Formes formes) {

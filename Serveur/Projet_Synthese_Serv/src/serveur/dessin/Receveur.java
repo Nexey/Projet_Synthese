@@ -7,12 +7,15 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 import dessin.CadreDessin;
-import experts.*;
+import experts.dessins.FormeCOR;
+import experts.dessins.CercleCOR;
+import experts.dessins.GroupeCOR;
+import experts.dessins.PolygoneCOR;
 
 public class Receveur extends Thread {
 	private Socket client;
 	private BufferedReader in;
-	AbstractCOR expert;
+	FormeCOR expert;
 	CadreDessin cadre;
 
 	public Receveur(Socket client) throws IOException {

@@ -71,11 +71,10 @@ Vecteur2D & Vecteur2D::zoom(const Vecteur2D & o, const double & k) {
 Vecteur2D & Vecteur2D::rotation(const Vecteur2D & c, const double & a) {
 	double angle = a;
 	angle *= M_PI / 180;
-	double dirP1 = atan2(c.y - y, c.x - x);
-	double dirP2 = dirP1 + angle;
-	double dist = std::sqrt(std::pow((c.x - x), 2) + (std::pow((c.y - y), 2)));
-	x = c.x + dist * cos(dirP2);
-	y = c.y + dist * sin(dirP2);
+	double nouvAngle = (std::atan2(c.y - y, c.x - x)) + angle;
+	double dist = std::abs(c.x - x) + std::abs(c.y - y);
+	x = c.x + dist * cos(nouvAngle);
+	y = c.y + dist * sin(nouvAngle);
 	return *this;
 }
 
