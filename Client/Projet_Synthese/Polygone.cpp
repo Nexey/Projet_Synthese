@@ -64,6 +64,15 @@ void Polygone::rotation(const Vecteur2D & c, const double & a) {
 		it->rotation(c, a);
 }
 
+const double Polygone::aire() const {
+	// Calcule de l'aire
+	double aire = 0;
+	for (int i = 0; i < (int)points.size() - 1; i++)
+		aire += points[i].x * points[i + 1].y - points[i + 1].x * points[i].y;
+	aire += points[points.size() - 1].x * points[0].y - points[0].x * points[points.size() - 1].y;
+	return std::abs(aire / 2);
+}
+
 const std::string Polygone::getInfos() const {
 	std::ostringstream oss;
 	oss << FormeGeo::getInfos();
@@ -74,6 +83,7 @@ const std::string Polygone::getInfos() const {
 		if (it + 1 != points.end())
 			oss << " - ";
 	}
+	oss << getSeparateur() << "AIRE : " << aire();
 	return oss.str();
 }
 

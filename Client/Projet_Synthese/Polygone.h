@@ -26,6 +26,8 @@ public:
 	void translation(const Vecteur2D&);
 	void zoom(const Vecteur2D& o, const double& k);
 	void rotation(const Vecteur2D& c, const double& a);
+	virtual const double aire() const;
+
 	virtual const std::string getInfos() const;
 	FormeGeo* accepter(IVisiteur *v);
 	FormeGeo * clone() const;

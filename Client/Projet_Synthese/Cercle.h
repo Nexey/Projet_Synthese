@@ -14,6 +14,8 @@ public:
 	void addPoint(const Vecteur2D&);
 
 	inline const double getRayon() const;
+	const double aire() const;
+
 	virtual const std::string getInfos() const;
 	FormeGeo* accepter(IVisiteur *v);
 	FormeGeo * clone() const;

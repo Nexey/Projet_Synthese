@@ -24,7 +24,7 @@ public class CercleCOR extends AbstractCOR {
 		initTitreCouleur(formeStr);
 		initForme(formeStr);
 		
-		double rayon = Double.parseDouble(formeStr.get(4));
+		double rayon = Double.parseDouble(formeStr.get(5));
 		formes.add(new Ellipse2D.Double(listeX[0], listeY[0], rayon*2, rayon*2));
 		return formes;
 	}

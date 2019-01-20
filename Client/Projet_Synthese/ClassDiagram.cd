@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="IVisiteur">
+    <Position X="14.25" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IVisiteur.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SauvegardeTexte">
+    <Position X="12.25" Y="16" Width="3" />
+    <Members>
+      <Method Name="~SauvegardeTexte" Hidden="true" />
+      <Method Name="SauvegardeTexte" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>SauvegardeTexte.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisiteurSauvegarde">
+    <Position X="12.25" Y="13" Width="3" />
+    <Members>
+      <Method Name="~VisiteurSauvegarde" Hidden="true" />
+      <Method Name="VisiteurSauvegarde" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAEAAAAAAAAAAAAIAAAAAgAAAA=</HashCode>
+      <FileName>VisiteurSauvegarde.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisiteurDessin">
+    <Position X="16" Y="13" Width="2.5" />
+    <Members>
+      <Method Name="~VisiteurDessin" Hidden="true" />
+      <Method Name="VisiteurDessin" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAACABAAAQAA=</HashCode>
+      <FileName>VisiteurDessin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientDessin" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAgAAAAAAAAAAgAAAAAAAAAAAQAA=</HashCode>
+      <FileName>ClientDessin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAEEgBAAABAAAAAAAAgAQQCQAIoAAAABgAAAQAAAAA=</HashCode>
+      <FileName>Menu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaWinsock" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAABgAAQAAAAAAAAEAAA=</HashCode>
+      <FileName>MaWinsock.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Erreur" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAgAAAAEAAAAAAAAAAAAAAAAiA=</HashCode>
+      <FileName>Erreur.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormeGeo">
+    <Position X="6" Y="0.5" Width="3.75" />
+    <Members>
+      <Method Name="~FormeGeo" Hidden="true" />
+      <Method Name="FormeGeo" Hidden="true" />
+      <Method Name="getCouleur" Hidden="true" />
+      <Method Name="getDesig" Hidden="true" />
+      <Method Name="getInfos" Hidden="true" />
+      <Method Name="getNbSommet" Hidden="true" />
+      <Method Name="getSeparateur" Hidden="true" />
+      <Method Name="setCouleur" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACAIAAgAAAoAAIAACAigABBBAwAIEAAAEIggEgAAABg=</HashCode>
+      <FileName>FormeGeo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormeGeoSimple">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <Members>
+      <Method Name="~FormeGeoSimple" Hidden="true" />
+      <Method Name="FormeGeoSimple" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>FormeGeoSimple.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Polygone">
+    <Position X="3.75" Y="7.5" Width="3.75" />
+    <Members>
+      <Method Name="~Polygone" Hidden="true" />
+      <Method Name="Polygone" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACAAABSAAAIAAAAAAACAARABACEAAAAAAEggEAAAQAA=</HashCode>
+      <FileName>Polygone.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cercle">
+    <Position X="7.75" Y="12.25" Width="2.75" />
+    <Members>
+      <Method Name="~Cercle" Hidden="true" />
+      <Method Name="Cercle" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAgABACAAAAAAAABQCAAAAAAAAgAEAAAAAA=</HashCode>
+      <FileName>Cercle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Segment">
+    <Position X="0.5" Y="12.25" Width="2.75" />
+    <Members>
+      <Method Name="~Segment" Hidden="true" />
+      <Method Name="Segment" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAABgAAAAAAAAAAAEAAAABAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Segment.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Triangle">
+    <Position X="4" Y="12.25" Width="3" />
+    <Members>
+      <Method Name="~Triangle" Hidden="true" />
+      <Method Name="Triangle" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAABAAAAAAAAABAAAAAQABAAAAAAAAAAAgEAAAAAA=</HashCode>
+      <FileName>Triangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groupe">
+    <Position X="11.25" Y="5.75" Width="3.75" />
+    <Members>
+      <Method Name="~Groupe" Hidden="true" />
+      <Method Name="Groupe" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACAAAkAAAAIAAAAAAACAABABAAEAAAAAAEggEAAAABA=</HashCode>
+      <FileName>Groupe.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vecteur2D" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAABAAAAGgARAAAAAAAAQAAQBgAAAAAAA=</HashCode>
+      <FileName>Vecteur2D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

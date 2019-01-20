@@ -71,7 +71,8 @@ public abstract class AbstractCOR {
     
     public abstract Formes construit(ArrayList<ArrayList<String>> listeFormes);
     
-    public Formes generer(ArrayList<ArrayList<String>> listeFormes){
+    public Formes generer(ArrayList<ArrayList<String>> listeFormes) {
+    	this.formes.getListeFormes().clear();
         if(peutConstruire(listeFormes.get(0).get(0)))
             return construit(listeFormes);
 

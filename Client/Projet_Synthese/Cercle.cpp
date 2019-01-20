@@ -1,6 +1,8 @@
 #include "Cercle.h"
 #include "IVisiteur.h"
 
+#define M_PI acos(-1)
+
 Cercle::Cercle(const int& c, const double& r, const Vecteur2D& p) : Polygone("Cercle", c), rayon(r) {
 	addPoint(p);
 }
@@ -20,6 +22,10 @@ void Cercle::addPoint(const Vecteur2D &v) {
 
 inline const double Cercle::getRayon() const {
 	return rayon;
+}
+
+const double Cercle::aire() const {
+	return M_PI * std::pow(rayon, 2);
 }
 
 const std::string Cercle::getInfos() const {
