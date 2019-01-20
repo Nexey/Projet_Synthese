@@ -1,5 +1,7 @@
 #include "Vecteur2D.h"
 
+#define M_PI acos(-1)
+
 Vecteur2D::Vecteur2D(const double & x, const double & y) : x(x), y(y) {}
 
 Vecteur2D::Vecteur2D(const Vecteur2D &v) : x(v.x), y(v.y) {}
@@ -12,6 +14,10 @@ const Vecteur2D Vecteur2D::creeVecteur2D(const double & x, const double & y) {
 
 const Vecteur2D Vecteur2D::operator+(const Vecteur2D & u) const {
 	return Vecteur2D(x + u.x, y + u.y);
+}
+
+const Vecteur2D Vecteur2D::operator-(const Vecteur2D & u) const {
+	return Vecteur2D(x - u.x, y - u.y);
 }
 
 const Vecteur2D Vecteur2D::operator*(const double & a) const {
@@ -63,6 +69,13 @@ Vecteur2D & Vecteur2D::zoom(const Vecteur2D & o, const double & k) {
 }
 
 Vecteur2D & Vecteur2D::rotation(const Vecteur2D & c, const double & a) {
+	double angle = a;
+	angle *= M_PI / 180;
+	double dirP1 = atan2(c.y - y, c.x - x);
+	double dirP2 = dirP1 + angle;
+	double dist = std::sqrt(std::pow((c.x - x), 2) + (std::pow((c.y - y), 2)));
+	x = c.x + dist * cos(dirP2);
+	y = c.y + dist * sin(dirP2);
 	return *this;
 }
 

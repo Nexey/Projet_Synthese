@@ -14,6 +14,7 @@ public:
 
 	static const Vecteur2D creeVecteur2D(const double & x, const double & y);
 	const Vecteur2D operator + (const Vecteur2D & u) const;
+	const Vecteur2D operator-(const Vecteur2D & u) const;
 	const Vecteur2D operator * (const double & a) const;
 
 	const Vecteur2D operator ^ (const Vecteur2D & u) const;
@@ -34,4 +35,3 @@ public:
 
 	friend std::ostream & operator << (std::ostream & os, const Vecteur2D & u);
 };
-
