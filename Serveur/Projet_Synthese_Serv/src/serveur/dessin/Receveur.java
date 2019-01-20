@@ -6,12 +6,14 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 import java.util.ArrayList;
 
+import dessin.CadreDessin;
 import experts.*;
 
 public class Receveur extends Thread {
 	private Socket client;
 	private BufferedReader in;
 	AbstractCOR expert;
+	CadreDessin cadre;
 
 	public Receveur(Socket client) throws IOException {
 		// On récupère le client ainsi que son Buffer
@@ -25,7 +27,7 @@ public class Receveur extends Thread {
 								new GroupeCOR()
 								)
 						);
-		
+		cadre = new CadreDessin();
 	}
 	
 	private void expert(String requete) {
@@ -63,8 +65,8 @@ public class Receveur extends Thread {
 		listeFormes.add(new ArrayList<String>(forme));
 		forme.clear();
 		
-		if (expert.generer(listeFormes)) System.out.println("La forme peut être générée");
-		else System.out.println("La forme n'a pas pu être générée");
+		
+		cadre.dessiner(expert.generer(listeFormes));
 	}
 	
 	public void run() {

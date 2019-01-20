@@ -1,7 +1,8 @@
 package experts;
 
-import java.awt.Polygon;
 import java.util.ArrayList;
+
+import dessin.Formes;
 
 public class GroupeCOR extends AbstractCOR {
 	
@@ -16,40 +17,26 @@ public class GroupeCOR extends AbstractCOR {
 	}
 
 	@Override
-	protected void initFormes(ArrayList<ArrayList<String>> listeFormes) {
-		// TODO Auto-generated method stub
+	public Formes construit(ArrayList<ArrayList<String>> listeFormes) {
+		// listeFormes.get(0) est l'arrayList du Groupe
+		ArrayList<String> formeStr = listeFormes.get(0);
 		
-	}
+		AbstractCOR expert;
 
-	@Override
-	public boolean construit(ArrayList<ArrayList<String>> listeFormes) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	
-	/*
-	@Override
-	protected void initFormes(ArrayList<String> formeStr) {
-		// On réassemble le groupe pour le décortiquer comme je veux
-		String formesDuGroupe = "";
-		for (int i = 4; i < formeStr.size(); i++) {
-			formesDuGroupe += formeStr.get(i);
+		expert = 
+				new CercleCOR(
+						new PolygoneCOR(
+								new GroupeCOR()
+								)
+						);
+		ArrayList<ArrayList<String>> formesTmp = new ArrayList<ArrayList<String>>();
+		for (int i = 1; i < listeFormes.size(); i++) {
+			formesTmp.add(listeFormes.get(i));
+			formes.getListeFormes().addAll(expert.generer(formesTmp).getListeFormes());
+			formesTmp.clear();
 		}
 		
-		System.out.println(formesDuGroupe);
-		// On enlève tous les espaces inutiles
-		String ligneCoords = formeStr.get(3).trim();
-		String listeCoords[] = ligneCoords.split("-");
-		String coordStr[];
-		
-		for (int i = 0; i < nbSommets; i++) {
-			coordStr = listeCoords[i].replaceAll("[()]", "").split(",");
-			this.listeX[i] = (Integer.parseInt(coordStr[this.X]));
-			this.listeY[i] = (Integer.parseInt(coordStr[this.Y]));
-		}
-		
-		formes.add(new Polygon(this.listeX, this.listeY, nbSommets));
+		initTitreCouleur(formeStr);
+		return formes;
 	}
-	*/
 }

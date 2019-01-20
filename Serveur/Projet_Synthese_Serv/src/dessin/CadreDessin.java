@@ -7,7 +7,6 @@ import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
 import java.awt.Shape;
 import java.awt.image.BufferStrategy;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,11 +34,11 @@ public class CadreDessin extends Canvas {
 		this.setPreferredSize(new Dimension(512, 512));
 	}
 	
-	public void dessiner(ArrayList<Shape> formes, String titre, String couleur) {
+	public void dessiner(Formes formes) {
 		System.setProperty("sun.awt.noerasebackground", "true");
 		try {
 			JFrame f = new JFrame();
-	        f.setTitle(titre);
+	        f.setTitle(formes.getTitre());
 	        f.setSize(512, 512);
 	        
 	        f.setIgnoreRepaint(true);	// désactive l'appel automatique de la fct paint(...) par repaint()
@@ -61,10 +60,10 @@ public class CadreDessin extends Canvas {
 			BufferStrategy strategie = canvas.getBufferStrategy();
 		    Graphics2D graphics = (Graphics2D) strategie.getDrawGraphics();
 		    
-		    Color coul = this.tabCouleurs.get(couleur);
+		    Color coul = this.tabCouleurs.get(formes.getCouleur());
 		    graphics.setColor(coul);
 		    
-		    for (Shape forme : formes)
+		    for (Shape forme : formes.getListeFormes())
 		    	graphics.draw(forme);
 		    strategie.show();
 		    
