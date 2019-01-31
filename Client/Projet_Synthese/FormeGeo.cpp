@@ -2,7 +2,10 @@
 
 int FormeGeo::nbFormeGeos = 0;
 
-const std::string FormeGeo::tabCouleurs[6] = { "BLACK", "BLUE", "RED", "GREEN", "YELLOW", "CYAN" };
+std::map<int, std::string> FormeGeo::mapCouleurs = {
+	{FormeGeo::BLACK, "BLACK"}, {FormeGeo::BLUE, "BLUE"}, {FormeGeo::RED, "RED"},
+	{FormeGeo::GREEN, "GREEN"}, {FormeGeo::YELLOW, "YELLOW"}, {FormeGeo::CYAN, "CYAN"}
+};
 
 FormeGeo::FormeGeo(const std::string& d, const int& c, const std::string & s) : desig(d), separateur(s), couleur(c) {}
 
@@ -20,7 +23,7 @@ inline const std::string & FormeGeo::getSeparateur() const {
 
 const std::string FormeGeo::getInfos() const {
 	std::ostringstream oss;
-	oss << "ID : " << desig << getSeparateur() << "COULEUR : " << FormeGeo::tabCouleurs[couleur] << getSeparateur() << "NB_SOMMETS : " << getNbSommet();
+	oss << "ID : " << desig << getSeparateur() << "COULEUR : " << FormeGeo::mapCouleurs.at(couleur) << getSeparateur() << "NB_SOMMETS : " << getNbSommet();
 	return oss.str();
 }
 

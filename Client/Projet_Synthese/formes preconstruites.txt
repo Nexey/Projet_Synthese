@@ -1,0 +1,6 @@
+{ ID : Cercle; COULEUR : CYAN; NB_SOMMETS : 1; SOMMETS : (20, 20); AIRE : 2827.43; RAYON : 30 }
+{ ID : Triangle; COULEUR : BLUE; NB_SOMMETS : 3; SOMMETS : (20, 20) - (50, 20) - (20, 100); AIRE : 1200 }
+{ ID : Segment; COULEUR : GREEN; NB_SOMMETS : 2; SOMMETS : (10, 10) - (100, 100); AIRE : 0 }
+{ ID : Polygone; COULEUR : YELLOW; NB_SOMMETS : 5; SOMMETS : (20, 20) - (20, 30) - (30, 40) - (40, 50) - (50, 60); AIRE : 150 }
+{ ID : Groupe; COULEUR : RED; NB_SOMMETS : 5; NB_FORMES : 2; [ID : Triangle; COULEUR : RED; NB_SOMMETS : 3; SOMMETS : (10, 10) - (200, 10) - (10, 200); AIRE : 18050]; [ID : Segment; COULEUR : RED; NB_SOMMETS : 2; SOMMETS : (10, 10) - (100, 100); AIRE : 0] }
+{ ID : Groupe; COULEUR : GREEN; NB_SOMMETS : 5; NB_FORMES : 2; [ID : Groupe; COULEUR : GREEN; NB_SOMMETS : 3; NB_FORMES : 1; [ID : Triangle; COULEUR : GREEN; NB_SOMMETS : 3; SOMMETS : (10, 10) - (10, 100) - (100, 10); AIRE : 4050]]; [ID : Segment; COULEUR : GREEN; NB_SOMMETS : 2; SOMMETS : (10, 10) - (100, 100); AIRE : 0] }

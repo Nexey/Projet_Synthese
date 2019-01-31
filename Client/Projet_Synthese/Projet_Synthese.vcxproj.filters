@@ -91,6 +91,60 @@
     <Filter Include="Fichiers d%27en-tête\Visiteur\Dessin">
       <UniqueIdentifier>{c97b9867-b5f9-4390-a8b3-3adb6255b954}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert">
+      <UniqueIdentifier>{ee9cbdc9-a0bd-4d88-a515-b81a5a08d5b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert">
+      <UniqueIdentifier>{0c4ba263-d62b-4c32-9c8c-555e536e8591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert\Chargement">
+      <UniqueIdentifier>{e091f08b-517a-49e2-8a60-c2a1815877f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert\Chargement">
+      <UniqueIdentifier>{e1edc02c-84d1-41bb-aef4-9dc46dfe040b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert\Création">
+      <UniqueIdentifier>{a84d1d7f-91cc-4493-9b83-1479f9191cfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert\Création">
+      <UniqueIdentifier>{bc1a0e08-bc3e-47d8-8b0b-5f9a058fffaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert\Chargement\Texte">
+      <UniqueIdentifier>{46695ad7-cb53-4c84-9925-34a2a9f85d05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert\Chargement\Texte">
+      <UniqueIdentifier>{0722e1fc-a47c-4544-8811-84bdcbc876db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert\Création\Triangle">
+      <UniqueIdentifier>{59600d20-e834-48a4-8391-5d1b571d25f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert\Création\Cercle">
+      <UniqueIdentifier>{04a8260b-db17-4828-b96d-90025c899725}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert\Création\Segment">
+      <UniqueIdentifier>{cf783c88-1ca6-41ba-b044-942644f71576}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert\Création\Polygone">
+      <UniqueIdentifier>{bdbd5134-934b-41b9-98c6-3642bafdad0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Expert\Création\Groupe">
+      <UniqueIdentifier>{11de50f6-b0d2-4a61-8602-71130688d745}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert\Création\Cercle">
+      <UniqueIdentifier>{c30b1378-3547-4110-b3cd-5485af0cf9fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert\Création\Triangle">
+      <UniqueIdentifier>{3601ca64-5e93-46bc-a4d9-9a28816bb2a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert\Création\Segment">
+      <UniqueIdentifier>{1791ec30-3d7e-45a5-91b0-0d2e5885e5be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert\Création\Polygone">
+      <UniqueIdentifier>{9b403b7d-916d-43e5-a527-17db5b6f1109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Expert\Création\Groupe">
+      <UniqueIdentifier>{97935f99-98c9-4746-93e7-6df91872d3bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FormeGeo.cpp">
@@ -144,6 +198,36 @@
     <ClCompile Include="VisiteurDessin.cpp">
       <Filter>Fichiers sources\Visiteur\Dessin</Filter>
     </ClCompile>
+    <ClCompile Include="ChargementFichier.cpp">
+      <Filter>Fichiers sources\Expert\Chargement</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargementFichierTexte.cpp">
+      <Filter>Fichiers sources\Expert\Chargement\Texte</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionnaireChargement.cpp">
+      <Filter>Fichiers sources\Expert\Chargement</Filter>
+    </ClCompile>
+    <ClCompile Include="CreationCOR.cpp">
+      <Filter>Fichiers sources\Expert\Création</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionnaireCreation.cpp">
+      <Filter>Fichiers sources\Expert\Création</Filter>
+    </ClCompile>
+    <ClCompile Include="CreationCercleCOR.cpp">
+      <Filter>Fichiers sources\Expert\Création\Cercle</Filter>
+    </ClCompile>
+    <ClCompile Include="CreationPolygoneCOR.cpp">
+      <Filter>Fichiers sources\Expert\Création\Polygone</Filter>
+    </ClCompile>
+    <ClCompile Include="CreationSegmentCOR.cpp">
+      <Filter>Fichiers sources\Expert\Création\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="CreationTriangleCOR.cpp">
+      <Filter>Fichiers sources\Expert\Création\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="CreationGroupeCOR.cpp">
+      <Filter>Fichiers sources\Expert\Création\Groupe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FormeGeo.h">
@@ -193,6 +277,36 @@
     </ClInclude>
     <ClInclude Include="VisiteurDessin.h">
       <Filter>Fichiers d%27en-tête\Visiteur\Dessin</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargementFichier.h">
+      <Filter>Fichiers d%27en-tête\Expert\Chargement</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargementFichierTexte.h">
+      <Filter>Fichiers d%27en-tête\Expert\Chargement\Texte</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionnaireChargement.h">
+      <Filter>Fichiers d%27en-tête\Expert\Chargement</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionnaireCreation.h">
+      <Filter>Fichiers d%27en-tête\Expert\Création</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationCOR.h">
+      <Filter>Fichiers d%27en-tête\Expert\Création</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationCercleCOR.h">
+      <Filter>Fichiers d%27en-tête\Expert\Création\Cercle</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationPolygoneCOR.h">
+      <Filter>Fichiers d%27en-tête\Expert\Création\Polygone</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationSegmentCOR.h">
+      <Filter>Fichiers d%27en-tête\Expert\Création\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationTriangleCOR.h">
+      <Filter>Fichiers d%27en-tête\Expert\Création\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationGroupeCOR.h">
+      <Filter>Fichiers d%27en-tête\Expert\Création\Groupe</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

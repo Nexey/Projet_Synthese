@@ -24,6 +24,9 @@ public:
 	Menu();
 	virtual ~Menu();
 
+	// Les formes chargées seront créées et sauvegardées au fur et à mesur
+	void chargerFormes(const std::string & chemin);
+
 	const void show();
 	template<class T>
 	const void inputVar(T&) const;
@@ -33,7 +36,7 @@ public:
 	const std::vector<Vecteur2D>* inputPoints(int nbPoints = 0) const;
 	const std::vector<FormeGeo*>* inputGroupe(const int nbFormes, const int couleur) const;
 
-	const void sauvegarder() const;
+	const void sauvegarder(FormeGeo * forme) const;
 	const void dessiner();
 
 	operator std::string() const;

@@ -1,13 +1,22 @@
 #include "Menu.h"
+#include <fstream>
+#include "ChargementFichierTexte.h"
 
 Menu::Menu() {
 	visiSauvegarde = new SauvegardeTexte();
 	visiDessin = new VisiteurDessin();
-	show();
 }
 
 Menu::~Menu() {
 	formes.clear();
+}
+
+void Menu::chargerFormes(const std::string & chemin) {
+	GestionnaireChargement * expertChargement = new ChargementFichierTexte;
+	this->formes = expertChargement->gerer(chemin);
+	std::vector<FormeGeo*>::const_iterator it = this->formes.begin();
+	for (it; it < this->formes.end(); it++)
+		this->sauvegarder(*it);
 }
 
 const void Menu::show() {
@@ -28,7 +37,7 @@ const void Menu::show() {
 		break;
 	default:
 		formes.push_back(inputForme(choix));
-		sauvegarder();
+		sauvegarder(formes.back());
 		break;
 	}
 
@@ -44,7 +53,7 @@ const int Menu::inputCouleur() const {
 	int couleur;
 	std::cout << "Sélectionnez la couleur : " << std::endl;
 	for (int i = FormeGeo::BLACK; i <= FormeGeo::CYAN; i++)
-		std::cout << i << ") " << FormeGeo::tabCouleurs[i] << std::endl;
+		std::cout << i << ") " << FormeGeo::mapCouleurs.at(i) << std::endl;
 	do {
 		inputVar(couleur);
 	} while (couleur < FormeGeo::BLACK || couleur > FormeGeo::CYAN);
@@ -131,10 +140,8 @@ const std::vector<FormeGeo*> * Menu::inputGroupe(const int nbFormes, const int c
 	return f;
 }
 
-const void Menu::sauvegarder() const {
-	std::vector<FormeGeo*>::const_iterator it = formes.begin();
-	for (it; it < formes.end(); it++)
-		(*it)->accepter(visiSauvegarde);
+const void Menu::sauvegarder(FormeGeo * forme) const {
+	forme->accepter(visiSauvegarde);
 }
 
 const void Menu::dessiner() {

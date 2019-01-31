@@ -6,13 +6,23 @@
 
 #pragma comment(lib, "Ws2_32.lib")
 
-int main() {
+int main(int argc, char **argv) {
 	SetConsoleOutputCP(1252); // Pour les accents dans la console sous Windows
+
+	Menu menu;
 
 	// Remet à 0 le fichier de sauvegarde
 	std::ofstream output("formes.txt");
+	output.close();
 
-	Menu menu;
+	if (argc == 2)
+		menu.chargerFormes(std::string(argv[1]));
+	else {
+		menu.chargerFormes("formes preconstruites.txt");
+	}
+
+	menu.show();
+
 	/*
 	FormeGeo *pt = new Triangle(FormeGeo::BLACK, Vecteur2D(0, 0), Vecteur2D(0, 4), Vecteur2D(4, 0));
 	std::cout << *pt << std::endl;
@@ -47,7 +57,6 @@ int main() {
 	delete pt;
 
 	*/
-	output.close();
 	//system("pause");
 	exit(0);
 }

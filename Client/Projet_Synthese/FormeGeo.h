@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <map>
 #include <sstream>
 #include "Vecteur2D.h"
 
@@ -26,7 +27,9 @@ public:
 		YELLOW = 4,
 		CYAN = 5;
 
-	static const std::string tabCouleurs[6];
+	//typedef std::map<int, std::string> mapIntString;
+
+	static std::map<int, std::string> mapCouleurs;
 
 	inline const std::string& getDesig() const;
 	inline const std::string & getSeparateur() const;

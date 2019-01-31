@@ -118,10 +118,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
+    <ClInclude Include="ChargementFichier.h" />
+    <ClInclude Include="ChargementFichierTexte.h" />
     <ClInclude Include="ClientDessin.h" />
+    <ClInclude Include="CreationCercleCOR.h" />
+    <ClInclude Include="CreationCOR.h" />
+    <ClInclude Include="CreationGroupeCOR.h" />
+    <ClInclude Include="CreationPolygoneCOR.h" />
+    <ClInclude Include="CreationSegmentCOR.h" />
+    <ClInclude Include="CreationTriangleCOR.h" />
     <ClInclude Include="Erreur.h" />
     <ClInclude Include="FormeGeo.h" />
     <ClInclude Include="FormeGeoSimple.h" />
+    <ClInclude Include="GestionnaireChargement.h" />
+    <ClInclude Include="GestionnaireCreation.h" />
     <ClInclude Include="Groupe.h" />
     <ClInclude Include="IVisiteur.h" />
     <ClInclude Include="MaWinsock.h" />
@@ -136,10 +146,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="ChargementFichier.cpp" />
+    <ClCompile Include="ChargementFichierTexte.cpp" />
     <ClCompile Include="ClientDessin.cpp" />
+    <ClCompile Include="CreationCercleCOR.cpp" />
+    <ClCompile Include="CreationCOR.cpp" />
+    <ClCompile Include="CreationGroupeCOR.cpp" />
+    <ClCompile Include="CreationPolygoneCOR.cpp" />
+    <ClCompile Include="CreationSegmentCOR.cpp" />
+    <ClCompile Include="CreationTriangleCOR.cpp" />
     <ClCompile Include="Erreur.cpp" />
     <ClCompile Include="FormeGeo.cpp" />
     <ClCompile Include="FormeGeoSimple.cpp" />
+    <ClCompile Include="GestionnaireChargement.cpp" />
+    <ClCompile Include="GestionnaireCreation.cpp" />
     <ClCompile Include="Groupe.cpp" />
     <ClCompile Include="IVisiteur.cpp" />
     <ClCompile Include="Main.cpp" />
